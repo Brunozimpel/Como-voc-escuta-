@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotocalibracao(View view){
-        Intent intent = new Intent(this, IniciarActivity.class);
+        Intent intent = new Intent(this, CalibracaoActivity.class);
         startActivity(intent);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.bruno.prototipo11;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -17,6 +18,20 @@ public class IniciarActivity extends Activity {
         setContentView(R.layout.activity_iniciar);
 
         TextView tv = (TextView)findViewById(R.id.txt_iniciar);
+
+        String receivedAction = getIntent().getAction();
+
+        if (receivedAction != null){
+
+            if (receivedAction.equals(this.getString(R.string.ACTION_INICIAR_CALIBRACAO))){
+                String data = getIntent().getStringExtra(Intent.EXTRA_TEXT);
+                tv.setText(data);
+            }
+
+        }
+        else{
+            tv.setText("ERRO");
+        }
 
 
     }

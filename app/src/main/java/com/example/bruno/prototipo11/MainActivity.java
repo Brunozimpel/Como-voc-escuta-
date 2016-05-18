@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void gotocalibracao(View view){
-        Intent intent = new Intent(this, CalibracaoActivity.class);
+    public void gotoprecalibracao(View view){
+        Intent intent = new Intent(this, PreCalibracao.class);
         startActivity(intent);
     }
 

@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Prototipo1.1</string>
     <string name="tittle">Audiograma para Android versao 1</string>
-    <string name="button_1">Iniciar Calibração</string>
+    <string name="button_1">Calibração</string>
+    <string name="button_2">Iniciar Calibração</string>
     <string name="calibracao">Calibração em andamento</string>
+    <string name="precalibracao">Aproxime o seu fone de ouvido do microfone do seu celular</string>
+
 
 </resources>

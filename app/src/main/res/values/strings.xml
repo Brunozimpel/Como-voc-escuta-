@@ -3,5 +3,6 @@
     <string name="tittle">Audiograma para Android versao 1</string>
     <string name="button_1">Iniciar Calibração</string>
     <string name="calibracao">Calibração em andamento</string>
-
+    <string name="lb_iniciar">INICIAR</string>
+    
 </resources>

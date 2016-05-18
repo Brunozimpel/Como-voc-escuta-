@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PreCalibracao.class);
         startActivity(intent);
     }
-
 }
 
 

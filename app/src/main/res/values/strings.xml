@@ -4,5 +4,10 @@
     <string name="button_1">Iniciar Calibração</string>
     <string name="calibracao">Calibração em andamento</string>
     <string name="lb_iniciar">INICIAR</string>
-    
+
+    <!-- CUSTOM ACTIONS -->
+
+    <string name="ACTION_INICIAR_CALIBRACAO">com.example.bruno.prototipo11.action.INIT_CALIB</string>
+    <string name="ACTION_INICAR_TESTE">com.example.bruno.prototipo11.action.INIT_TESTE</string>
+
 </resources>

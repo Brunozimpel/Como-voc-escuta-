@@ -8,8 +8,6 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/precalibracao"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="74dp"
         android:gravity="center"
         android:textSize="20sp"/>
@@ -19,12 +17,11 @@
         android:layout_height="wrap_content"
         android:text="@string/button_2"
         android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="108dp"
         android:onClick="gotocalibracao"
         android:gravity="center"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        />
 
 
 

@@ -6,6 +6,7 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 
 /**
@@ -13,6 +14,7 @@ import android.view.View;
  */
 public class PrimeiroTesteActivity extends Activity {
 
+    int flagOuviu;
     int soundID_1kHz;
 
     SoundPool soundPool;
@@ -34,7 +36,6 @@ public class PrimeiroTesteActivity extends Activity {
         createSoundPool();
         loadSounds();
         volumeSounds();
-        play();
     }
 
     @Override
@@ -77,38 +78,381 @@ public class PrimeiroTesteActivity extends Activity {
         volume = curVolume / maxVolume;
     }
 
-    protected void play(){
-        try {
-            Thread.sleep(10 * 1000);
+    public void init(View view) { //teste iniciado, começaremos pela orelha direita automaticamente
+        try {Thread.sleep(2 * 1000);
         }
         catch (InterruptedException e) {
             e.printStackTrace();
         }
-        soundPool.play(soundID_1kHz,1,1,0,0,1);
-        try {
-            Thread.sleep(5 * 1000);
-        }
-        catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        soundPool.play(soundID_1kHz,1,1,0,0,1);
+        soundPool.play(soundID_1kHz,0,volume,0,0,1); //50dbNA
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (flagOuviu != 0) { //ouviu 50dbNA
+                    flagOuviu = 0;
+                    soundPool.play(soundID_1kHz, 0, volume /1.25F, 0, 0, 1); //40dbNA
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (flagOuviu != 0) { //ouviu 40dbNA
+                                flagOuviu = 0;
+                                soundPool.play(soundID_1kHz, 0, volume /1.67F, 0, 0, 1); //30dbNA
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (flagOuviu != 0) { //ouviu 30dbNA
+                                            flagOuviu = 0;
+                                            soundPool.play(soundID_1kHz, 0, volume / 2.5F, 0, 0, 1); //20dbNA
+                                            handler.postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    if (flagOuviu != 0) { //ouviu 20dbNA
+                                                        flagOuviu = 0;
+                                                        soundPool.play(soundID_1kHz, 0, volume / 5, 0, 0, 1); //10dbNA
+                                                        handler.postDelayed(new Runnable() {
+                                                            @Override
+                                                            public void run() {
+                                                                if (flagOuviu != 0) { //ouviu 10dbNA
+                                                                    flagOuviu = 0;
+                                                                    // COLOCAR NO BANCO DE DADOS
+                                                                }
+                                                                else{ //n ouviu 10dbNA
+                                                                    soundPool.play(soundID_1kHz,0,volume/2.5F,0,0,1); //20 dbNA
+                                                                    handler.postDelayed(new Runnable() {
+                                                                        @Override
+                                                                        public void run() {
+                                                                            if (flagOuviu != 0) { //ouviu 40dbNA
+                                                                                flagOuviu = 0;
+                                                                                // COLOCAR NO BANCO DE DADOS
+                                                                            }
+                                                                            else{ //n ouviu 20dbNA
+                                                                                soundPool.play(soundID_1kHz,0,volume/1.67F,0,0,1); //30 dbNA
+                                                                                handler.postDelayed(new Runnable() {
+                                                                                    @Override
+                                                                                    public void run() {
+                                                                                        if (flagOuviu != 0) { //ouviu 40dbNA
+                                                                                            flagOuviu = 0;
+                                                                                            // COLOCAR NO BANCO DE DADOS
+                                                                                        }
+                                                                                        else{ //n ouviu 30dbNA
+                                                                                            soundPool.play(soundID_1kHz,0,volume/1.25F,0,0,1); //40 dbNA
+                                                                                            handler.postDelayed(new Runnable() {
+                                                                                                @Override
+                                                                                                public void run() {
+                                                                                                    if (flagOuviu != 0) { //ouviu 40dbNA
+                                                                                                        flagOuviu = 0;
+                                                                                                        // COLOCAR NO BANCO DE DADOS
+                                                                                                    }
+                                                                                                    else{ //n ouviu 40dbNA
+                                                                                                        soundPool.play(soundID_1kHz,0,volume,0,0,1); //50 dbNA
+                                                                                                        handler.postDelayed(new Runnable() {
+                                                                                                            @Override
+                                                                                                            public void run() {
+                                                                                                                if (flagOuviu != 0) { //ouviu 50dbNA
+                                                                                                                    flagOuviu = 0;
+                                                                                                                    // COLOCAR NO BANCO DE DADOS
+                                                                                                                }
+                                                                                                                else {
+                                                                                                                    soundPool.play(soundID_1kHz, 0, volume * 1.2F, 0, 0, 1); //60 dbNA
+                                                                                                                    handler.postDelayed(new Runnable() {
+                                                                                                                        @Override
+                                                                                                                        public void run() {
+                                                                                                                            if (flagOuviu != 0) { //ouviu 60dbNA
+                                                                                                                                flagOuviu = 0;
+                                                                                                                                // COLOCAR NO BANCO DE DADOS
+                                                                                                                            }
+                                                                                                                            else {
+                                                                                                                                soundPool.play(soundID_1kHz, 0, volume * 1.4F, 0, 0, 1); //70 dbNA
+                                                                                                                                handler.postDelayed(new Runnable() {
+                                                                                                                                    @Override
+                                                                                                                                    public void run() {
+                                                                                                                                        if (flagOuviu != 0) { //ouviu 70dbNA
+                                                                                                                                            flagOuviu = 0;
+                                                                                                                                            // COLOCAR NO BANCO DE DADOS
+                                                                                                                                        }
+                                                                                                                                        else {
+                                                                                                                                            soundPool.play(soundID_1kHz, 0, volume * 1.6F, 0, 0, 1); //80 dbNA
+                                                                                                                                            handler.postDelayed(new Runnable() {
+                                                                                                                                                @Override
+                                                                                                                                                public void run() {
+                                                                                                                                                    if (flagOuviu != 0) { //ouviu 80dbNA
+                                                                                                                                                        flagOuviu = 0;
+                                                                                                                                                        // COLOCAR NO BANCO DE DADOS
+                                                                                                                                                    }
+                                                                                                                                                    else {
+                                                                                                                                                        //PERDA DE AUDIÇAO SUPERIOR AO SUPORTADO PELO APP
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                            }, 5 * 1000);
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                }, 5 * 1000);
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }, 5 * 1000);
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }, 5 * 1000);
+                                                                                                    }
+                                                                                                }
+                                                                                            }, 5 *1000);
+                                                                                        }
+                                                                                    }
+                                                                                }, 5 * 1000);
+                                                                            }
+                                                                        }
+                                                                    }, 5 * 1000);
+                                                                }
+                                                            }
+                                                        }, 5 * 1000);
+                                                    }
+                                                    else{ //n ouviu 20dbNA
+                                                        soundPool.play(soundID_1kHz,0,volume/1.67F,0,0,1); //30 dbNA
+                                                        handler.postDelayed(new Runnable() {
+                                                            @Override
+                                                            public void run() {
+                                                                if (flagOuviu != 0) { //ouviu 40dbNA
+                                                                    flagOuviu = 0;
+                                                                    // COLOCAR NO BANCO DE DADOS
+                                                                }
+                                                                else{ //n ouviu 30dbNA
+                                                                    soundPool.play(soundID_1kHz,0,volume/1.25F,0,0,1); //40 dbNA
+                                                                    handler.postDelayed(new Runnable() {
+                                                                        @Override
+                                                                        public void run() {
+                                                                            if (flagOuviu != 0) { //ouviu 40dbNA
+                                                                                flagOuviu = 0;
+                                                                                // COLOCAR NO BANCO DE DADOS
+                                                                            }
+                                                                            else{ //n ouviu 40dbNA
+                                                                                soundPool.play(soundID_1kHz,0,volume,0,0,1); //50 dbNA
+                                                                                handler.postDelayed(new Runnable() {
+                                                                                    @Override
+                                                                                    public void run() {
+                                                                                        if (flagOuviu != 0) { //ouviu 50dbNA
+                                                                                            flagOuviu = 0;
+                                                                                            // COLOCAR NO BANCO DE DADOS
+                                                                                        }
+                                                                                        else {
+                                                                                            soundPool.play(soundID_1kHz, 0, volume * 1.2F, 0, 0, 1); //60 dbNA
+                                                                                            handler.postDelayed(new Runnable() {
+                                                                                                @Override
+                                                                                                public void run() {
+                                                                                                    if (flagOuviu != 0) { //ouviu 60dbNA
+                                                                                                        flagOuviu = 0;
+                                                                                                        // COLOCAR NO BANCO DE DADOS
+                                                                                                    }
+                                                                                                    else {
+                                                                                                        soundPool.play(soundID_1kHz, 0, volume * 1.4F, 0, 0, 1); //70 dbNA
+                                                                                                        handler.postDelayed(new Runnable() {
+                                                                                                            @Override
+                                                                                                            public void run() {
+                                                                                                                if (flagOuviu != 0) { //ouviu 70dbNA
+                                                                                                                    flagOuviu = 0;
+                                                                                                                    // COLOCAR NO BANCO DE DADOS
+                                                                                                                }
+                                                                                                                else {
+                                                                                                                    soundPool.play(soundID_1kHz, 0, volume * 1.6F, 0, 0, 1); //80 dbNA
+                                                                                                                    handler.postDelayed(new Runnable() {
+                                                                                                                        @Override
+                                                                                                                        public void run() {
+                                                                                                                            if (flagOuviu != 0) { //ouviu 80dbNA
+                                                                                                                                flagOuviu = 0;
+                                                                                                                                // COLOCAR NO BANCO DE DADOS
+                                                                                                                            }
+                                                                                                                            else {
+                                                                                                                                //PERDA DE AUDIÇAO SUPERIOR AO SUPORTADO PELO APP
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }, 5 * 1000);
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }, 5 * 1000);
+                                                                                                    }
+                                                                                                }
+                                                                                            }, 5 * 1000);
+                                                                                        }
+                                                                                    }
+                                                                                }, 5 * 1000);
+                                                                            }
+                                                                        }
+                                                                    }, 5 *1000);
+                                                                }
+                                                            }
+                                                        }, 5 * 1000);
+                                                    }
+                                                }
+                                            }, 5 * 1000);
+                                        }
+                                        else{ //n ouviu 30dbNA
+                                            soundPool.play(soundID_1kHz,0,volume/1.25F,0,0,1); //40 dbNA
+                                            handler.postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    if (flagOuviu != 0) { //ouviu 40dbNA
+                                                        flagOuviu = 0;
+                                                        // COLOCAR NO BANCO DE DADOS
+                                                    }
+                                                    else{ //n ouviu 40dbNA
+                                                        soundPool.play(soundID_1kHz,0,volume,0,0,1); //50 dbNA
+                                                        handler.postDelayed(new Runnable() {
+                                                            @Override
+                                                            public void run() {
+                                                                if (flagOuviu != 0) { //ouviu 50dbNA
+                                                                    flagOuviu = 0;
+                                                                    // COLOCAR NO BANCO DE DADOS
+                                                                }
+                                                                else {
+                                                                    soundPool.play(soundID_1kHz, 0, volume * 1.2F, 0, 0, 1); //60 dbNA
+                                                                    handler.postDelayed(new Runnable() {
+                                                                        @Override
+                                                                        public void run() {
+                                                                            if (flagOuviu != 0) { //ouviu 60dbNA
+                                                                                flagOuviu = 0;
+                                                                                // COLOCAR NO BANCO DE DADOS
+                                                                            }
+                                                                            else {
+                                                                                soundPool.play(soundID_1kHz, 0, volume * 1.4F, 0, 0, 1); //70 dbNA
+                                                                                handler.postDelayed(new Runnable() {
+                                                                                    @Override
+                                                                                    public void run() {
+                                                                                        if (flagOuviu != 0) { //ouviu 70dbNA
+                                                                                            flagOuviu = 0;
+                                                                                            // COLOCAR NO BANCO DE DADOS
+                                                                                        }
+                                                                                        else {
+                                                                                            soundPool.play(soundID_1kHz, 0, volume * 1.6F, 0, 0, 1); //80 dbNA
+                                                                                            handler.postDelayed(new Runnable() {
+                                                                                                @Override
+                                                                                                public void run() {
+                                                                                                    if (flagOuviu != 0) { //ouviu 80dbNA
+                                                                                                        flagOuviu = 0;
+                                                                                                        // COLOCAR NO BANCO DE DADOS
+                                                                                                    }
+                                                                                                    else {
+                                                                                                        //PERDA DE AUDIÇAO SUPERIOR AO SUPORTADO PELO APP
+                                                                                                    }
+                                                                                                }
+                                                                                            }, 5 * 1000);
+                                                                                        }
+                                                                                    }
+                                                                                }, 5 * 1000);
+                                                                            }
+                                                                        }
+                                                                    }, 5 * 1000);
+                                                                }
+                                                            }
+                                                        }, 5 * 1000);
+                                                    }
+                                                }
+                                            }, 5 *1000);
+                                        }
+                                    }
+                                }, 5 *1000);
+                            }
+                            else{ //n ouviu 40dbNA
+                                soundPool.play(soundID_1kHz,0,volume,0,0,1); //50 dbNA
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (flagOuviu != 0) { //ouviu 50dbNA
+                                            flagOuviu = 0;
+                                            // COLOCAR NO BANCO DE DADOS
+                                        }
+                                        else {
+                                            soundPool.play(soundID_1kHz, 0, volume * 1.2F, 0, 0, 1); //60 dbNA
+                                            handler.postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    if (flagOuviu != 0) { //ouviu 60dbNA
+                                                        flagOuviu = 0;
+                                                        // COLOCAR NO BANCO DE DADOS
+                                                    }
+                                                    else {
+                                                        soundPool.play(soundID_1kHz, 0, volume * 1.4F, 0, 0, 1); //70 dbNA
+                                                        handler.postDelayed(new Runnable() {
+                                                            @Override
+                                                            public void run() {
+                                                                if (flagOuviu != 0) { //ouviu 70dbNA
+                                                                    flagOuviu = 0;
+                                                                    // COLOCAR NO BANCO DE DADOS
+                                                                }
+                                                                else {
+                                                                    soundPool.play(soundID_1kHz, 0, volume * 1.6F, 0, 0, 1); //80 dbNA
+                                                                    handler.postDelayed(new Runnable() {
+                                                                        @Override
+                                                                        public void run() {
+                                                                            if (flagOuviu != 0) { //ouviu 80dbNA
+                                                                                flagOuviu = 0;
+                                                                                // COLOCAR NO BANCO DE DADOS
+                                                                            }
+                                                                            else {
+                                                                                //PERDA DE AUDIÇAO SUPERIOR AO SUPORTADO PELO APP
+                                                                            }
+                                                                        }
+                                                                    }, 5 * 1000);
+                                                                }
+                                                            }
+                                                        }, 5 * 1000);
+                                                    }
+                                                }
+                                            }, 5 * 1000);
+                                        }
+                                    }
+                                }, 5 * 1000);
+                            }
+                        }
+                    }, 5 * 1000);
+                }
+                else{ //n ouviu 50dbNA
+                    soundPool.play(soundID_1kHz,0,volume*1.2F,0,0,1); //60 dbNA
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (flagOuviu != 0) { //ouviu 60dbNA
+                                flagOuviu = 0;
+                                // COLOCAR NO BANCO DE DADOS
+                            }
+                            else {
+                                soundPool.play(soundID_1kHz,0,volume*1.4F,0,0,1); //70 dbNA
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (flagOuviu != 0) { //ouviu 70dbNA
+                                            flagOuviu = 0;
+                                            // COLOCAR NO BANCO DE DADOS
+                                        }
+                                        else {
+                                            soundPool.play(soundID_1kHz,0,volume*1.6F,0,0,1); //80 dbNA
+                                            handler.postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    if (flagOuviu != 0) { //ouviu 80dbNA
+                                                        flagOuviu = 0;
+                                                        // COLOCAR NO BANCO DE DADOS
+                                                    }
+                                                    else {
+                                                        //PERDA DE AUDIÇAO SUPERIOR AO SUPORTADO PELO APP
+                                                    }
+                                                }
+                                            },5*1000);
+                                        }
+                                    }
+                                },5*1000);
+                            }
+                        }
+                    },5*1000);
+                }
+            }
+        }, 5 * 1000);
+
+
     }
 
-    public void play(View view) {
-        try {
-            Thread.sleep(3 * 1000);
-        }
-        catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        soundPool.play(soundID_1kHz,1,1,0,0,1);
-        try {
-            Thread.sleep(3 * 1000);
-        }
-        catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        soundPool.play(soundID_1kHz,1,1,0,0,1);
+    public void ouviu(View view) {
+        flagOuviu = 1;
     }
 }
 

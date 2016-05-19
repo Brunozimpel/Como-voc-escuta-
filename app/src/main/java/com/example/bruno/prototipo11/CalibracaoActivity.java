@@ -1,5 +1,6 @@
 package com.example.bruno.prototipo11;
 
+
 import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -10,7 +11,7 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-
+import android.view.View;
 
 import java.io.IOException;
 
@@ -25,7 +26,7 @@ public class CalibracaoActivity extends AppCompatActivity {
     private static String mFileName = null;
     private MediaRecorder mRecorder = null;
 
-    private final int duration = 1; // seconds
+    private final int duration = 3; // seconds
     private final int sampleRate = 8000;
     private final int numSamples = duration * sampleRate;
     private final double sample[] = new double[numSamples];
@@ -66,6 +67,7 @@ public class CalibracaoActivity extends AppCompatActivity {
         mRecorder = null;
     }
 
+
     public double getAmplitude() {
         if (mRecorder != null) {
             return (mRecorder.getMaxAmplitude() / 2700.0);
@@ -87,6 +89,7 @@ public class CalibracaoActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calibracao);
+
 
         Intent intent;
         if(resultado()==1){

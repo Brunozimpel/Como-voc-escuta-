@@ -80,7 +80,7 @@ public class PrimeiroTesteActivity extends Activity {
     }
 
     public void direito(View view) { //teste iniciado, começaremos pela orelha direita automaticamente
-        try {Thread.sleep(2 * 1000);
+        try {Thread.sleep(1 * 1000);
         }
         catch (InterruptedException e) {
             e.printStackTrace();
@@ -482,7 +482,7 @@ public class PrimeiroTesteActivity extends Activity {
     }
 
     public void esquerdo(View view) {
-        try {Thread.sleep(5 * 1000);
+        try {Thread.sleep(1 * 1000);
         }
         catch (InterruptedException e) {
             e.printStackTrace();

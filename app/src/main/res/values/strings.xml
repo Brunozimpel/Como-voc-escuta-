@@ -8,5 +8,9 @@
     <string name="lb_iniciar">INICIAR</string>
     <string name="fim1">O seu fone não está apto à realizar o teste, tente novamente com outro fone.</string>
     <string name="button_3">Segure apertado para realizar a calibração</string>
+    <string name="fim2">Perda de audição superior ao suportado pelos nossos testes. Recomendamos realizar teste clínico.</string>
+    <string name="fim3">Seus resultados:</string>
+
+
 
 </resources>

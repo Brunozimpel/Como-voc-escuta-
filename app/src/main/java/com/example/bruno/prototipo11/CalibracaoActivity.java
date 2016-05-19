@@ -36,7 +36,7 @@ public class CalibracaoActivity extends AppCompatActivity {
 
     Handler handler = new Handler();
 
-    private void onRecord(boolean start) {
+    public void onRecord(boolean start) {
         if (start) {
             startRecording();
         } else {
@@ -155,6 +155,8 @@ public class CalibracaoActivity extends AppCompatActivity {
         audioTrack.write(generatedSnd, 0, generatedSnd.length);
         audioTrack.play();
     }
+
+
 }
 
 

@@ -35,9 +35,6 @@ public class PrimeiroTesteActivity extends Activity {
         loadSounds();
         volumeSounds();
         play();
-            }
-
-    private void play() {
     }
 
     @Override
@@ -81,10 +78,36 @@ public class PrimeiroTesteActivity extends Activity {
     }
 
     protected void play(){
+        try {
+            Thread.sleep(10 * 1000);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        soundPool.play(soundID_1kHz,1,1,0,0,1);
+        try {
+            Thread.sleep(5 * 1000);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         soundPool.play(soundID_1kHz,1,1,0,0,1);
     }
 
     public void play(View view) {
+        try {
+            Thread.sleep(3 * 1000);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        soundPool.play(soundID_1kHz,1,1,0,0,1);
+        try {
+            Thread.sleep(3 * 1000);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         soundPool.play(soundID_1kHz,1,1,0,0,1);
     }
 }

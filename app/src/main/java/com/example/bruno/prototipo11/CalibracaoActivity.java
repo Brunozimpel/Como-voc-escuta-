@@ -77,7 +77,7 @@ public class CalibracaoActivity extends AppCompatActivity {
     }
 
     @Override
-       protected void onPause() {
+    protected void onPause() {
        super.onPause();
        soundPool.release();
         if (mRecorder != null) {
@@ -87,11 +87,11 @@ public class CalibracaoActivity extends AppCompatActivity {
     }
 
     @Override
-       protected void onResume() {
+    protected void onResume() {
        super.onResume();
        createSoundPool();
        loadSounds();
-        }
+    }
 
     protected void createSoundPool(){
            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -107,13 +107,13 @@ public class CalibracaoActivity extends AppCompatActivity {
             else {
                 soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC,0);
             }
-        }
+    }
 
-        protected void loadSounds() {
-            soundID_1kHz = soundPool.load(this,R.raw.som1,1);
-        }
+    protected void loadSounds() {
+        soundID_1kHz = soundPool.load(this,R.raw.som1,1);
+    }
 
-        protected void volumeSounds(){
+    protected void volumeSounds(){
             audioManager = (AudioManager) getSystemService(AUDIO_SERVICE);
             curVolume = (float)audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
             maxVolume = (float)audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);

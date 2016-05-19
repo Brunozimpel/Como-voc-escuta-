@@ -80,10 +80,6 @@ public class PrimeiroTesteActivity extends Activity {
         volume = curVolume / maxVolume;
     }
 
-    protected void play(){
-        soundPool.play(soundID_1kHz,1,1,0,0,1);
-    }
-
     public void play(View view) {
         soundPool.play(soundID_1kHz,1,1,0,0,1);
     }

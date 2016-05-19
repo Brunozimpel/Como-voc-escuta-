@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PreCalibracao.class);
         startActivity(intent);
     }
+
+    public void teste(View view) {
+        Intent intent = new Intent(this, PrimeiroTesteActivity.class);
+        startActivity(intent);
+    }
 }
 
 

@@ -29,6 +29,17 @@
         android:layout_marginBottom="108dp"
         android:onClick="gotoprecalibracao"/>
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="teste"
+        android:onClick="teste"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
+
 
 </RelativeLayout>
 

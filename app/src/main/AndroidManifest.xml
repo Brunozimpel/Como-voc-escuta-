@@ -24,6 +24,7 @@
         <activity android:name=".PreCalibracao">
 
         </activity>
+        <activity android:name=".PrimeiroTesteActivity" />
 
     </application>
 

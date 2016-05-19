@@ -6,6 +6,7 @@ import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 
 /**
  * Created by Guilherme on 18/05/16.
@@ -26,12 +27,14 @@ public class PrimeiroTesteActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_primeiroteste);
 
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         createSoundPool();
         loadSounds();
         volumeSounds();
+        //play();
     }
 
     @Override
@@ -72,6 +75,14 @@ public class PrimeiroTesteActivity extends Activity {
         curVolume = (float)audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
         maxVolume = (float)audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         volume = curVolume / maxVolume;
+    }
+
+//    protected void play(){
+//        soundPool.play(soundID_1kHz,1,1,0,0,1);
+//    }
+
+    public void play(View view) {
+        soundPool.play(soundID_1kHz,1,1,0,0,1);
     }
 }
 

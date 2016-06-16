@@ -11,6 +11,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import java.io.IOException;
 
@@ -30,6 +31,12 @@ public class CalibracaoActivity extends AppCompatActivity {
     private final double freqOfTone = 1000; // hz
 
     private final byte generatedSnd[] = new byte[2 * numSamples];
+
+
+
+
+
+
 
 
 
@@ -99,7 +106,7 @@ public class CalibracaoActivity extends AppCompatActivity {
 //        }
 //    }
 
-            @Override
+    @Override
     protected void onResume() {
         super.onResume();
         // Use a new tread as this can take a while

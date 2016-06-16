@@ -17,7 +17,20 @@ public class PrimeiroTesteActivity extends Activity {
 
     int flagOuviu, soundID_1kHz;
     float curVolume, maxVolume, volume, testVolume;
-
+//
+//    public int randomTime(){
+//        int time;
+//        double num = Math.random();
+//        if (num < 0.3){
+//            time = 2000;
+//        } else if (num < 0.67 && num >= 0.3){
+//            time = 2500;
+//        }else{
+//            time = 3000;
+//        };
+//        return time;
+//    }
+//
     SoundPool soundPool;
     SoundPool.Builder soundPoolBuilder;
 
@@ -81,6 +94,7 @@ public class PrimeiroTesteActivity extends Activity {
 
     public void direito(View view) { //teste iniciado, começaremos pela orelha direita automaticamente
         try {Thread.sleep(1 * 1000);
+        //try {Thread.sleep(randomTime());
         }
         catch (InterruptedException e) {
             e.printStackTrace();

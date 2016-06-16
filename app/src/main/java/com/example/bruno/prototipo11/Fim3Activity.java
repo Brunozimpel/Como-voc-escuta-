@@ -8,6 +8,14 @@ import android.os.Bundle;
  */
 public class Fim3Activity extends Activity {
 
+
+    Bundle B=getIntent().getExtras();
+    if (B!=null){
+        String Resultado_dir=B.getString("45 dB no ouvid direito");
+    }
+    textview.setText(Resultado_dir)
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

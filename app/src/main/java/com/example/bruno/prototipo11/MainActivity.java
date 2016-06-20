@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void teste(View view) {
-        Intent intent = new Intent(this, PrimeiroTesteActivity.class);
+        Intent intent = new Intent(this, OuvidoDireitoActivity.class);
         startActivity(intent);
     }
 }

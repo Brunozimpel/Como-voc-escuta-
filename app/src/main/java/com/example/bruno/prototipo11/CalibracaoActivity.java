@@ -70,7 +70,7 @@ public class CalibracaoActivity extends AppCompatActivity {
 //
 //        Intent intent;
 //        if(resultado()==1){
-//            intent = new Intent(this, PrimeiroTesteActivity.class);
+//            intent = new Intent(this, OuvidoDireitoActivity.class);
 //        }else{
 //            intent = new Intent(this, Fim1Activity.class);
 //        }

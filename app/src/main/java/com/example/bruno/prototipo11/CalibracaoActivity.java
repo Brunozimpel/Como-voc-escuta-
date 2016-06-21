@@ -21,8 +21,8 @@ import java.io.IOException;
  */
 public class CalibracaoActivity extends AppCompatActivity {
 //
-//    private MediaRecorder myRecorder;
-//    private String outputFile = null;
+    private MediaRecorder myRecorder;
+    private String outputFile = null;
 
     private final int duration = 2; // seconds
     private final int sampleRate = 4000;
@@ -34,78 +34,72 @@ public class CalibracaoActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
     Handler handler = new Handler();
+// comeca 1
+    int getAmplitude = myRecorder.getMaxAmplitude();
 
-//    int getAmplitude = myRecorder.getMaxAmplitude();
-//
-//    public int resultado(){
-//        if (getAmplitude != 0) {
-//            return 1;
-//        }else {
-//            return 0;
-//        }
-//    }
+    public int resultado(){
+        if (getAmplitude != 0) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
 
-
+// termima 1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calibracao);
+// comeca2
+        outputFile = Environment.getExternalStorageDirectory().
+            getAbsolutePath() + "/teste.3gpp";
 
-//        outputFile = Environment.getExternalStorageDirectory().
-//            getAbsolutePath() + "/teste.3gpp";
-//
-//        myRecorder = new MediaRecorder();
-//        myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-//        myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-//        myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
-//        myRecorder.setOutputFile(outputFile);
-//
-//
-//        Intent intent;
-//        if(resultado()==1){
-//            intent = new Intent(this, OuvidoDireitoActivity.class);
-//        }else{
-//            intent = new Intent(this, Fim1Activity.class);
-//        }
+        myRecorder = new MediaRecorder();
+        myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+        myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+        myRecorder.setOutputFile(outputFile);
 
+
+        Intent intent;
+        if(resultado()==1){
+            intent = new Intent(this, OuvidoDireitoActivity.class);
+        }else{
+            intent = new Intent(this, Fim1Activity.class);
+        }
+// termina2
+    }
+//comeco3
+    void start_gravacao() {
+        try {
+            myRecorder.prepare();
+            myRecorder.start();
+        } catch (IllegalStateException e) {
+            // start:it is called before prepare()
+            // prepare: it is called after start() or before setOutputFormat()
+            e.printStackTrace();
+        } catch (IOException e) {
+            // prepare() fails
+            e.printStackTrace();
+        }
     }
 
-//    void start_gravacao() {
-//        try {
-//            myRecorder.prepare();
-//            myRecorder.start();
-//        } catch (IllegalStateException e) {
-//            // start:it is called before prepare()
-//            // prepare: it is called after start() or before setOutputFormat()
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            // prepare() fails
-//            e.printStackTrace();
-//        }
-//    }
-//
-//    void stop_gravacao(){
-//
-//        try {
-//            myRecorder.stop();
-//            myRecorder.release();
-//            myRecorder  = null;
-//        } catch (IllegalStateException e) {
-//            //  it is called before start()
-//            e.printStackTrace();
-//        } catch (RuntimeException e) {
-//            // no valid audio/video data has been received
-//            e.printStackTrace();
-//        }
-//    }
+    void stop_gravacao(){
 
+        try {
+            myRecorder.stop();
+            myRecorder.release();
+            myRecorder  = null;
+        } catch (IllegalStateException e) {
+            //  it is called before start()
+            e.printStackTrace();
+        } catch (RuntimeException e) {
+            // no valid audio/video data has been received
+            e.printStackTrace();
+        }
+    }
+// termina 3
     @Override
     protected void onResume() {
         super.onResume();
@@ -123,9 +117,11 @@ public class CalibracaoActivity extends AppCompatActivity {
             }
         });
         thread.start();
-//                start_gravacao();
-//                SystemClock.sleep(3000);
-//                stop_gravacao();
+            // comeca4
+                start_gravacao();
+                SystemClock.sleep(3000);
+                stop_gravacao();
+            // termina 4
     }
 
 
@@ -158,7 +154,3 @@ public class CalibracaoActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-

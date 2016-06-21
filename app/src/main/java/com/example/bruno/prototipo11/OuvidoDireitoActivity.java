@@ -377,34 +377,34 @@ public class OuvidoDireitoActivity extends Activity {
         Intent intent = new Intent(this,Fim3Activity.class);
         switch (dB){
             case 1:
-                intent.putExtra("result", "-10 dB");
+                intent.putExtra("result1", "-10 dB");
                 break;
             case 2:
-                intent.putExtra("result", "0 dB");
+                intent.putExtra("result1", "0 dB");
                 break;
             case 3:
-                intent.putExtra("result", "10 dB");
+                intent.putExtra("result1", "10 dB");
                 break;
             case 4:
-                intent.putExtra("result", "20 dB");
+                intent.putExtra("result1", "20 dB");
                 break;
             case 5:
-                intent.putExtra("result", "30 dB");
+                intent.putExtra("result1", "30 dB");
                 break;
             case 6:
-                intent.putExtra("result", "40 dB");
+                intent.putExtra("result1", "40 dB");
                 break;
             case 7:
-                intent.putExtra("result", "50 dB");
+                intent.putExtra("result1", "50 dB");
                 break;
             case 8:
-                intent.putExtra("result", "60 dB");
+                intent.putExtra("result1", "60 dB");
                 break;
             case 9:
-                intent.putExtra("result", "70 dB");
+                intent.putExtra("result1", "70 dB");
                 break;
             case 10:
-                intent.putExtra("result", "80 dB");
+                intent.putExtra("result1", "80 dB");
                 break;
 
         }

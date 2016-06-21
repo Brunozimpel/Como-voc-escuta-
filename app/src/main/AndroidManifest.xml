@@ -28,9 +28,10 @@
 
         </activity>
         <activity android:name=".OuvidoDireitoActivity" />
+        <activity android:name=".OuvidoEsquerdoActivity"/>
+        <activity android:name=".Fim1Activity"/>
         <activity android:name=".Fim2Activity" />
-        <activity android:name=".Fim3Activity" /><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <activity android:name=".Fim3Activity"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

@@ -1,6 +1,7 @@
 package com.example.bruno.prototipo11;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
@@ -19,8 +20,18 @@ public class OuvidoDireitoActivity extends Activity {
     int duration = 3; //segundos
     int sr = 8000;
     int buffsize = duration * sr;
-    int dB = 5;
     String valor1000Hz;
+    int dB = 4;
+    int i1 = 0, j1 = 0;
+    int i2 = 0, j2 = 0;
+    int i3 = 0, j3 = 0;
+    int i4 = 0, j4 = 0;
+    int i5 = 0, j5 = 0;
+    int i6 = 0, j6 = 0;
+    int i7 = 0, j7 = 0;
+    int i8 = 0, j8 = 0;
+    int i9 = 0, j9 = 0;
+    int i10 = 0, j10 = 0;
 
     public int randomTime(){
         int time;
@@ -89,11 +100,241 @@ public class OuvidoDireitoActivity extends Activity {
                         e.printStackTrace();
                     }
 
-                    if (flagOuviu != 0) {
-                        flagOuviu = 0;
-                        amp -= 1000;
-                    }else {
-                        amp += 1000;
+
+                    switch (dB){
+                        case 1:
+                            if (flagOuviu != 0) {
+                                i1 += 1;
+                                flagOuviu = 0;
+                                if (j1 != 0) {
+                                    i1 += 1;
+                                    j1 = 0;
+                                }else if(i1 >= 2) {
+                                    finalErro();
+                                }
+                            }else {
+                                dB = 5;
+                                i4 -= 1;
+                                j4 += 1;
+                                amp += 1000;
+                            }
+                            break;
+                        case 2:
+                            if (flagOuviu != 0) {
+                                i2 += 1;
+                                flagOuviu = 0;
+                                if (j2 != 0) {
+                                    i2 += 1;
+                                    j2 = 0;
+                                }else if(j1 != 0) {
+                                    dB = 1;
+                                    j1 -= 2;
+                                    amp -= 1000;
+                                }else if(i2 >= 2) {
+                                    mandarResultado();
+                                }else{
+                                    dB = 1;
+                                    amp -= 1000;
+                                }
+                            }else {
+                                dB = 3;
+                                i2 -= 1;
+                                j2 += 1;
+                                amp += 1000;
+                            }
+                            break;
+                        case 3:
+                            if (flagOuviu != 0) {
+                                i3 += 1;
+                                flagOuviu = 0;
+                                if (j3 != 0) {
+                                    i3 += 1;
+                                    j3 = 0;
+                                }else if(j2 != 0) {
+                                    dB = 2;
+                                    j2 -= 2;
+                                    amp -= 1000;
+                                }else if(i3 >= 2) {
+                                    mandarResultado();
+                                }else{
+                                    dB = 2;
+                                    amp -= 1000;
+                                }
+                            }else {
+                                dB = 4;
+                                i3 -= 1;
+                                j3 += 1;
+                                amp += 1000;
+                            }
+                            break;
+                        case 4:
+                            if (flagOuviu != 0) {
+                                i4 += 1;
+                                flagOuviu = 0;
+                                if (j4 != 0) {
+                                    i4 += 1;
+                                    j4 = 0;
+                                }else if(j3 != 0) {
+                                    dB = 3;
+                                    j3 -= 2;
+                                    amp -= 1000;
+                                }else if(i4 >= 2) {
+                                    mandarResultado();
+                                }else{
+                                    dB = 3;
+                                    amp -= 1000;
+                                }
+                            }else {
+                                dB = 5;
+                                i4 -= 1;
+                                j4 += 1;
+                                amp += 1000;
+                            }
+                            break;
+                        case 5:
+                            if (flagOuviu != 0) {
+                                i5 += 1;
+                                flagOuviu = 0;
+                                if (j5 != 0) {
+                                    i5 += 1;
+                                    j5 = 0;
+                                }else if(j4 != 0) {
+                                    flagOuviu = 0;
+                                    dB = 4;
+                                    j4 -= 2;
+                                    amp -= 1000;
+                                }else if(i5 >= 2) {
+                                    mandarResultado();
+                                }else{
+                                    dB = 4;
+                                    amp -= 1000;
+                                }
+                            }else {
+                                dB = 6;
+                                i5 -= 1;
+                                j5 += 1;
+                                amp += 1000;
+                            }
+                            break;
+                        case 6:
+                            if (flagOuviu != 0) {
+                                i6 += 1;
+                                flagOuviu = 0;
+                                if (j6 != 0) {
+                                    i6 += 1;
+                                    j6 = 0;
+                                }else if(j5 != 0) {
+                                    dB = 5;
+                                    j5 -= 2;
+                                    amp -= 1000;
+                                }else if(i6 >= 2) {
+                                    mandarResultado();
+                                }else{
+                                    dB = 5;
+                                    amp -= 1000;
+                                }
+                            }else {
+                                dB = 7;
+                                i6 -= 1;
+                                j6 += 1;
+                                amp += 1000;
+                            }
+                            break;
+                        case 7:
+                            if (flagOuviu != 0) {
+                                i7 += 1;
+                                flagOuviu = 0;
+                                if (j7 != 0) {
+                                    i7 += 1;
+                                    j7 = 0;
+                                }else if(j6 != 0) {
+                                    dB = 6;
+                                    j6 -= 2;
+                                    amp -= 1000;
+                                }else if(i7 >= 2) {
+                                    mandarResultado();
+                                }else{
+                                    dB = 6;
+                                    amp -= 1000;
+                                }
+                            }else {
+                                dB = 8;
+                                i7 -= 1;
+                                j7 += 1;
+                                amp += 1000;
+                            }
+                            break;
+                        case 8:
+                            if (flagOuviu != 0) {
+                                i8 += 1;
+                                flagOuviu = 0;
+                                if (j8 != 0) {
+                                    i8 += 1;
+                                    j8 = 0;
+                                }else if(j7 != 0) {
+                                    dB = 7;
+                                    j7 -= 2;
+                                    amp -= 1000;
+                                }else if(i8 >= 2) {
+                                    mandarResultado();
+                                }else{
+                                    dB = 7;
+                                    amp -= 1000;
+                                }
+                            }else {
+                                dB = 9;
+                                i8 -= 1;
+                                j8 += 1;
+                                amp += 1000;
+                            }
+                            break;
+                        case 9:
+                            if (flagOuviu != 0) {
+                                i9 += 1;
+                                flagOuviu = 0;
+                                if (j9 != 0) {
+                                    i9 += 1;
+                                    j9 = 1;
+                                }else if(j8 != 0) {
+                                    dB = 8;
+                                    j8 -= 2;
+                                    amp -= 1000;
+                                }else if(i9 >= 2) {
+                                    mandarResultado();
+                                }else{
+                                    dB = 8;
+                                    amp -= 1000;
+                                }
+                            }else {
+                                dB = 10;
+                                i9 -= 1;
+                                j9 += 1;
+                                amp += 1000;
+                            }
+                            break;
+                        case 10:
+                            if (flagOuviu != 0) {
+                                i10 += 1;
+                                if(j9 != 0) {
+                                    flagOuviu = 0;
+                                    dB = 3;
+                                    j9 -= 2;
+                                    amp -= 1000;
+                                }else if(i10 >= 2) {
+                                    mandarResultado();
+                                }else{
+                                    flagOuviu = 0;
+                                    dB = 9;
+                                    amp -= 1000;
+                                }
+                            }else {
+                                i10 -= 1;
+                                j10 += 1;
+                                if (j10 >= 3){
+                                    finalErro();
+                                }
+                            }
+                            break;
                     }
 
                 }
@@ -133,8 +374,46 @@ public class OuvidoDireitoActivity extends Activity {
     }
 
     private void mandarResultado(){
+        Intent intent = new Intent(this,Fim3Activity.class);
+        switch (dB){
+            case 1:
+                intent.putExtra("result", "-10 dB");
+                break;
+            case 2:
+                intent.putExtra("result", "0 dB");
+                break;
+            case 3:
+                intent.putExtra("result", "10 dB");
+                break;
+            case 4:
+                intent.putExtra("result", "20 dB");
+                break;
+            case 5:
+                intent.putExtra("result", "30 dB");
+                break;
+            case 6:
+                intent.putExtra("result", "40 dB");
+                break;
+            case 7:
+                intent.putExtra("result", "50 dB");
+                break;
+            case 8:
+                intent.putExtra("result", "60 dB");
+                break;
+            case 9:
+                intent.putExtra("result", "70 dB");
+                break;
+            case 10:
+                intent.putExtra("result", "80 dB");
+                break;
 
+        }
+        startActivity(intent);
+    }
 
+    private void finalErro(){
+        Intent intent = new Intent(this,Fim2Activity.class);
+        startActivity(intent);
     }
 
 

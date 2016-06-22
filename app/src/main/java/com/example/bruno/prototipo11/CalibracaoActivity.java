@@ -35,23 +35,12 @@ public class CalibracaoActivity extends AppCompatActivity {
 
 
     Handler handler = new Handler();
-// comeca 1
-    int getAmplitude = myRecorder.getMaxAmplitude();
 
-    public int resultado(){
-        if (getAmplitude != 0) {
-            return 1;
-        }else {
-            return 0;
-        }
-    }
-
-// termima 1
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calibracao);
-// comeca2
+
         outputFile = Environment.getExternalStorageDirectory().
             getAbsolutePath() + "/teste.3gpp";
 
@@ -61,16 +50,14 @@ public class CalibracaoActivity extends AppCompatActivity {
         myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
         myRecorder.setOutputFile(outputFile);
 
-
         Intent intent;
         if(resultado()==1){
             intent = new Intent(this, OuvidoDireitoActivity.class);
         }else{
             intent = new Intent(this, Fim1Activity.class);
         }
-// termina2
     }
-//comeco3
+
     void start_gravacao() {
         try {
             myRecorder.prepare();
@@ -99,7 +86,19 @@ public class CalibracaoActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-// termina 3
+
+
+    int getAmplitude = myRecorder.getMaxAmplitude();
+
+    public int resultado(){
+        if (getAmplitude != 0) {
+            return 1;
+        }else {
+            return 0;
+        }
+    }
+
+
     @Override
     protected void onResume() {
         super.onResume();

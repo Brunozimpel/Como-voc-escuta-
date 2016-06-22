@@ -10,41 +10,35 @@ import android.widget.TextView;
  */
 public class Fim3Activity extends Activity {
 
-    TextView result1k;
+    TextView result500, result1k, result2k, result4k, result8k;
 
-    private String umk,doisk,tresk,quatrok,seisk,oitok;
+    private String quinhentos,umk,doisk,quatrok,oitok;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fim3);
-      //  result500 = (TextView) findViewById(R.id.quinhentos);
+        result500 = (TextView) findViewById(R.id.quinhentos);
         result1k = (TextView) findViewById(R.id.umKHz);
-     //   result2k = (TextView) findViewById(R.id.doisKHz);
-     //   result3k = (TextView) findViewById(R.id.tresKHz);
-     //   result4k = (TextView) findViewById(R.id.quatroKHz);
-     //   result6k = (TextView) findViewById(R.id.seisKHz);
-     //   result8k = (TextView) findViewById(R.id.oitoKHz);
+        result2k = (TextView) findViewById(R.id.doisKHz);
+        result4k = (TextView) findViewById(R.id.quatroKHz);
+        result8k = (TextView) findViewById(R.id.oitoKHz);
 
 
 
         Intent i=this.getIntent();
 
-        //quinhentos=i.getStringExtra("result0");
+        quinhentos=i.getStringExtra("result0");
         umk=i.getStringExtra("result1");
-       // doisk=i.getStringExtra("result2");
-       // tresk=i.getStringExtra("result3");
-       // quatrok=i.getStringExtra("result4");
-       // seisk=i.getStringExtra("result6");
-       // oitok=i.getStringExtra("result8");
+        doisk=i.getStringExtra("result2");
+        quatrok=i.getStringExtra("result4");
+        oitok=i.getStringExtra("result8");
 
-        //result500.setText("500Hz:"+quinhentos);
+        result500.setText("500Hz:"+quinhentos);
         result1k.setText("1KHz:"+umk);
-        //result2k.setText("2KHz:"+umk);
-        //result3k.setText("3KHz:"+umk);
-        //result4k.setText("4KHz:"+umk);
-        //result6k.setText("6KHz:"+umk);
-        //result8k.setText("8KHz:"+umk);
+        result2k.setText("2KHz:"+umk);
+        result4k.setText("4KHz:"+umk);
+        result8k.setText("8KHz:"+umk);
        }
 
     }

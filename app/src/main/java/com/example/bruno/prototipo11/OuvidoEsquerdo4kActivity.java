@@ -52,7 +52,7 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ouvidodireito);
+        setContentView(R.layout.activity_ouvidoesquerdo);
 
         TextView tv = (TextView) findViewById(R.id.freq);
         tv.setText("4k Hz");

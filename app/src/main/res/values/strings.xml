@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Prototipo1.1</string>
-    <string name="tittle">Audiograma para Android versao 1</string>
+    <string name="app_name">Prototipo2.1</string>
+    <string name="tittle">Audiograma para Android versao 2</string>
     <string name="button_1">Calibração</string>
     <string name="button_2">Iniciar Calibração</string>
     <string name="calibracao">Calibração em andamento</string>

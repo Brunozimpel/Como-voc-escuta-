@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoprecalibracao(View view){
-        Intent intent = new Intent(this, DadosActivity.class);
+        Intent intent = new Intent(this, PreCalibracao.class);
         startActivity(intent);
     }
 

@@ -17,7 +17,7 @@ public class OuvidoDireitoActivity extends Activity {
     Thread t;
     boolean isRunning = true;
     int flagOuviu = 0;
-    int duration = 3; //segundos
+    int duration = 2; //segundos
     int sr = 8000;
     int buffsize = duration * sr;
     int Hz;

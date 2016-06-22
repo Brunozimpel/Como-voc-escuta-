@@ -11,7 +11,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
 import java.io.IOException;
 
@@ -52,7 +51,7 @@ public class CalibracaoActivity extends AppCompatActivity {
 
         Intent intent;
         if(resultado()==1){
-            intent = new Intent(this, OuvidoDireitoActivity.class);
+            intent = new Intent(this, OuvidoDireito500Activity.class);
         }else{
             intent = new Intent(this, Fim1Activity.class);
         }

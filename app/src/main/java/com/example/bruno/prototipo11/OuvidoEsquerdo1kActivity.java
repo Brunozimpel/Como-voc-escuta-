@@ -1,18 +1,20 @@
 package com.example.bruno.prototipo11;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 /**
- * Created by Guilherme on 18/05/16.
+ * Created by Guilherme on 22/06/16.
  */
-public class OuvidoDireito500Activity extends Activity {
+public class OuvidoEsquerdo1kActivity extends AppCompatActivity {
+
+
 
     Thread t;
     boolean isRunning = true;
@@ -53,7 +55,7 @@ public class OuvidoDireito500Activity extends Activity {
         setContentView(R.layout.activity_ouvidodireito);
 
         TextView tv = (TextView) findViewById(R.id.freq);
-        tv.setText("500 Hz");
+        tv.setText("1k Hz");
 
         t = new Thread() {
             public void run() {
@@ -64,12 +66,12 @@ public class OuvidoDireito500Activity extends Activity {
                         sr, AudioFormat.CHANNEL_OUT_MONO,
                         AudioFormat.ENCODING_PCM_16BIT, sr,
                         AudioTrack.MODE_STREAM);
-                audioTrack.setStereoVolume(0,1);
+                audioTrack.setStereoVolume(1,0);
 
                 short samples[] = new short[sr];
                 double amp = 100;
                 double twopi = 2.*Math.PI;
-                double fr = 500.f;
+                double fr = 1000.f;
                 double ph = 0.0;
 
 
@@ -267,7 +269,7 @@ public class OuvidoDireito500Activity extends Activity {
                                     j7 -= 2;
                                     amp = 100;
                                 }else if(i8 >= 2) {
-                                        mandarResultado();
+                                    mandarResultado();
                                 }else{
                                     dB = 7;
                                     amp = 100;
@@ -365,38 +367,43 @@ public class OuvidoDireito500Activity extends Activity {
     }
 
     private void mandarResultado(){
-        Intent intent = new Intent(this,OuvidoDireito1kActivity.class);
+
+        String result0 = getIntent().getExtras().getString("result0");
+
+        Intent intent = new Intent(this,OuvidoDireito2kActivity.class);
+
+        intent.putExtra("result0", result0);
 
         switch (dB){
             case 1:
-                intent.putExtra("result0", "-10 dB");
+                intent.putExtra("result1", "-10 dB");
                 break;
             case 2:
-                intent.putExtra("result0", "0 dB");
+                intent.putExtra("result1", "0 dB");
                 break;
             case 3:
-                intent.putExtra("result0", "10 dB");
+                intent.putExtra("result1", "10 dB");
                 break;
             case 4:
-                intent.putExtra("result0", "20 dB");
+                intent.putExtra("result1", "20 dB");
                 break;
             case 5:
-                intent.putExtra("result0", "30 dB");
+                intent.putExtra("result1", "30 dB");
                 break;
             case 6:
-                intent.putExtra("result0", "40 dB");
+                intent.putExtra("result1", "40 dB");
                 break;
             case 7:
-                intent.putExtra("result0", "50 dB");
+                intent.putExtra("result1", "50 dB");
                 break;
             case 8:
-                intent.putExtra("result0", "60 dB");
+                intent.putExtra("result1", "60 dB");
                 break;
             case 9:
-                intent.putExtra("result0", "70 dB");
+                intent.putExtra("result1", "70 dB");
                 break;
             case 10:
-                intent.putExtra("result0", "80 dB");
+                intent.putExtra("result1", "80 dB");
                 break;
         }
 
@@ -407,12 +414,6 @@ public class OuvidoDireito500Activity extends Activity {
         Intent intent = new Intent(this,Fim2Activity.class);
         startActivity(intent);
     }
-
-
-
-
-
 }
-
 
 

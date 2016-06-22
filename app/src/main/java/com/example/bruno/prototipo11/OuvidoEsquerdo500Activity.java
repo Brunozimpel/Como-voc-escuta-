@@ -1,18 +1,19 @@
 package com.example.bruno.prototipo11;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
 /**
- * Created by Guilherme on 18/05/16.
+ * Created by Guilherme on 20/06/16.
  */
-public class OuvidoDireito500Activity extends Activity {
+public class OuvidoEsquerdo500Activity extends AppCompatActivity {
 
     Thread t;
     boolean isRunning = true;
@@ -64,7 +65,7 @@ public class OuvidoDireito500Activity extends Activity {
                         sr, AudioFormat.CHANNEL_OUT_MONO,
                         AudioFormat.ENCODING_PCM_16BIT, sr,
                         AudioTrack.MODE_STREAM);
-                audioTrack.setStereoVolume(0,1);
+                audioTrack.setStereoVolume(1,0);
 
                 short samples[] = new short[sr];
                 double amp = 100;
@@ -267,7 +268,7 @@ public class OuvidoDireito500Activity extends Activity {
                                     j7 -= 2;
                                     amp = 100;
                                 }else if(i8 >= 2) {
-                                        mandarResultado();
+                                    mandarResultado();
                                 }else{
                                     dB = 7;
                                     amp = 100;

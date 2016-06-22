@@ -18,9 +18,7 @@ public class OuvidoDireito1kActivity extends AppCompatActivity {
     Thread t;
     boolean isRunning = true;
     int flagOuviu = 0;
-    int duration = 3; //segundos
-    int sr = 8000;
-    int buffsize = duration * sr;
+    int sr = 44100;
     int dB = 7;
     int i1 = 0, j1 = 0;
     int i2 = 0, j2 = 0;
@@ -65,13 +63,13 @@ public class OuvidoDireito1kActivity extends AppCompatActivity {
                 // create an audiotrack object
                 AudioTrack audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC,
                         sr, AudioFormat.CHANNEL_OUT_MONO,
-                        AudioFormat.ENCODING_PCM_16BIT, buffsize,
+                        AudioFormat.ENCODING_PCM_16BIT, sr,
                         AudioTrack.MODE_STREAM);
                 audioTrack.setStereoVolume(0,1);
 
-                short samples[] = new short[buffsize];
+                short samples[] = new short[sr];
                 double amp = 100;
-                double twopi = 8.*Math.atan(1.);
+                double twopi = 2.*Math.PI;
                 double fr = 1000.f;
                 double ph = 0.0;
 
@@ -82,14 +80,11 @@ public class OuvidoDireito1kActivity extends AppCompatActivity {
                 // synthesis loop
                 while (isRunning) {
 
-                    for (int i = 0; i < buffsize; i++) {
+                    for (int i = 0; i < sr; i++) {
                         samples[i] = (short) (amp * Math.sin(ph));
                         ph += twopi * fr / sr;
-                        if(flagOuviu != 0){
-                            i = buffsize;
-                        }
                     }
-                    audioTrack.write(samples, 0, buffsize);
+                    audioTrack.write(samples, 0, sr);
 
                     try {
                         Thread.sleep(randomTime());

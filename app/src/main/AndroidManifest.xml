@@ -32,7 +32,11 @@
         <activity android:name=".OuvidoDireito2kActivity"/>
         <activity android:name=".OuvidoDireito4kActivity"/>
         <activity android:name=".OuvidoDireito8kActivity"/>
-        <activity android:name=".OuvidoEsquerdoActivity"/>
+        <activity android:name=".OuvidoEsquerdo500Activity"/>
+        <activity android:name=".OuvidoEsquerdo1kActivity"/>
+        <activity android:name=".OuvidoEsquerdo2kActivity"/>
+        <activity android:name=".OuvidoEsquerdo4kActivity"/>
+        <activity android:name=".OuvidoEsquerdo8kActivity"/>
         <activity android:name=".Fim1Activity"/>
         <activity android:name=".Fim2Activity" />
         <activity android:name=".Fim3Activity"/>

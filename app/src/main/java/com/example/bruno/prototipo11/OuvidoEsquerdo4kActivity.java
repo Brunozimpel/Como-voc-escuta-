@@ -20,7 +20,7 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
     boolean isRunning = true;
     int flagOuviu = 0;
     int sr = 44100;
-    int dB = 7;
+    int dB = 4;
     int i1 = 0, j1 = 0;
     int i2 = 0, j2 = 0;
     int i3 = 0, j3 = 0;

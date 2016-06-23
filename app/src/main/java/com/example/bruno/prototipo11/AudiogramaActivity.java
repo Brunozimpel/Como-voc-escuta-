@@ -3,6 +3,7 @@ package com.example.bruno.prototipo11;
 import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
@@ -128,6 +129,13 @@ public class AudiogramaActivity extends AppCompatActivity {
         seriesp2.setTitle("Esquerdo");
         graph.getLegendRenderer().setVisible(true);
         graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
+
+        Paint paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(10);
+        paint.setPathEffect(new DashPathEffect(new float[]{20, 20}, 0));
+        paint.setColor(Color.BLUE);
+        series2.setCustomPaint(paint);
 
 
     }

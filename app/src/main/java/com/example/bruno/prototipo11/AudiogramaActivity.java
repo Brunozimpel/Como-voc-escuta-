@@ -51,17 +51,17 @@ public class AudiogramaActivity extends AppCompatActivity {
         quatrokEsq = i.getStringExtra("result40");
         oitokEsq = i.getStringExtra("result80");
 
-        int x = Integer.parseInt(quinhentos);
-        int y = Integer.parseInt(umk);
-        int z = Integer.parseInt(doisk);
-        int s = Integer.parseInt(quatrok);
-        int t = Integer.parseInt(oitok);
+        int x = -(Integer.parseInt(quinhentos));
+        int y = -(Integer.parseInt(umk));
+        int z = -(Integer.parseInt(doisk));
+        int s = -(Integer.parseInt(quatrok));
+        int t = -(Integer.parseInt(oitok));
 
-        int x2 = Integer.parseInt(quinhentosEsq);
-        int y2 = Integer.parseInt(umkEsq);
-        int z2 = Integer.parseInt(doiskEsq);
-        int s2 = Integer.parseInt(quatrokEsq);
-        int t2 = Integer.parseInt(oitokEsq);
+        int x2 = -(Integer.parseInt(quinhentosEsq));
+        int y2 = -(Integer.parseInt(umkEsq));
+        int z2 = -(Integer.parseInt(doiskEsq));
+        int s2 = -(Integer.parseInt(quatrokEsq));
+        int t2 = -(Integer.parseInt(oitokEsq));
 
 
 
@@ -141,7 +141,7 @@ public class AudiogramaActivity extends AppCompatActivity {
 
         StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
         staticLabelsFormatter.setHorizontalLabels(new String[] {" ", "500", "1000", "2000","4000","8000"," "});
-        staticLabelsFormatter.setVerticalLabels(new String[] {"-10", "0", "10", "20","30","40","50","60","70","80"});
+        staticLabelsFormatter.setVerticalLabels(new String[] {"80", "70", "60", "50","40","30","20","10","0","-10"});
 
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
 
@@ -152,8 +152,8 @@ public class AudiogramaActivity extends AppCompatActivity {
         graph.getViewport().setMinX(0);
         graph.getViewport().setMaxX(9000);
         graph.getViewport().setXAxisBoundsManual(true);
-        graph.getViewport().setMaxY(80);
-        graph.getViewport().setMinY(-10);
+        graph.getViewport().setMaxY(10);
+        graph.getViewport().setMinY(-80);
         graph.getViewport().setYAxisBoundsManual(true);
         //mudar maxy pra 10 e miny pra -80, mudar os valores nas atividades das frequencias
 

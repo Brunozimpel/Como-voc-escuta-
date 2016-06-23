@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
 
     <application
         android:allowBackup="true"
@@ -33,8 +34,8 @@
         <activity android:name=".OuvidoEsquerdo8kActivity"/>
         <activity android:name=".Fim1Activity"/>
         <activity android:name=".Fim2Activity" />
-        <activity android:name=".Fim3Activity"/>
-        <activity android:name=".Fim3EsqActivity"/>
+        <activity android:name=".FimDirActivity"/>
+        <activity android:name=".FimEsqActivity"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

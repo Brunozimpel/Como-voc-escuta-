@@ -53,7 +53,7 @@ public class OuvidoEsquerdo2kActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ouvidoesquerdo);
 
-        TextView tv = (TextView) findViewById(R.id.freq);
+        TextView tv = (TextView) findViewById(R.id.freqEsq);
         tv.setText("2k Hz");
 
         t = new Thread() {
@@ -309,7 +309,7 @@ public class OuvidoEsquerdo2kActivity extends AppCompatActivity {
                                 i10 += 1;
                                 if(j9 != 0) {
                                     flagOuviu = 0;
-                                    dB = 3;
+                                    dB = 9;
                                     j9 -= 2;
                                     amp = 10000;
                                 }else if(i10 >= 2) {

@@ -53,7 +53,7 @@ public class OuvidoEsquerdo8kActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ouvidoesquerdo);
 
-        TextView tv = (TextView) findViewById(R.id.freq);
+        TextView tv = (TextView) findViewById(R.id.freqEsq);
         tv.setText("8k Hz");
 
         t = new Thread() {
@@ -309,7 +309,7 @@ public class OuvidoEsquerdo8kActivity extends AppCompatActivity {
                                 i10 += 1;
                                 if(j9 != 0) {
                                     flagOuviu = 0;
-                                    dB = 3;
+                                    dB = 9;
                                     j9 -= 2;
                                     amp = 10000;
                                 }else if(i10 >= 2) {
@@ -372,7 +372,7 @@ public class OuvidoEsquerdo8kActivity extends AppCompatActivity {
         String result20 = getIntent().getExtras().getString("result20");
         String result40 = getIntent().getExtras().getString("result40");
 
-        Intent intent = new Intent(this,Fim3Activity.class);
+        Intent intent = new Intent(this,FimDirActivity.class);
 
         intent.putExtra("result00", result00);
         intent.putExtra("result10", result10);

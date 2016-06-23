@@ -77,7 +77,7 @@ public class AudiogramaActivity extends AppCompatActivity {
                 new DataPoint(8000, t)
         });
         series.setColor(Color.RED);
-        series.setThickness(5);
+        series.setThickness(4);
         graph.addSeries(series);
 
         LineGraphSeries<DataPoint> series2 = new LineGraphSeries<DataPoint>(new DataPoint[]{
@@ -95,7 +95,7 @@ public class AudiogramaActivity extends AppCompatActivity {
         paint.setPathEffect(new DashPathEffect(new float[]{20, 20}, 0));
         paint.setColor(Color.BLUE);
         series2.setCustomPaint(paint);
-        series2.setThickness(5);
+        series2.setThickness(4);
 
         graph.addSeries(series2);
         series2.setColor(Color.BLUE);
@@ -110,6 +110,7 @@ public class AudiogramaActivity extends AppCompatActivity {
         });
         seriesp1.setColor(Color.RED);
         seriesp1.setShape(PointsGraphSeries.Shape.POINT);
+        seriesp1.setSize(12);
         graph.addSeries(seriesp1);
 
         PointsGraphSeries<DataPoint> seriesp2 = new PointsGraphSeries<DataPoint>(new DataPoint[]{
@@ -126,9 +127,9 @@ public class AudiogramaActivity extends AppCompatActivity {
         seriesp2.setCustomShape(new PointsGraphSeries.CustomShape() {
             @Override
             public void draw(Canvas canvas, Paint paint, float x, float y, DataPointInterface dataPoint) {
-                paint.setStrokeWidth(10);
-                canvas.drawLine(x - 20, y - 20, x + 20, y + 20, paint);
-                canvas.drawLine(x + 20, y - 20, x - 20, y + 20, paint);
+                paint.setStrokeWidth(6);
+                canvas.drawLine(x - 15, y - 15, x + 15, y + 15, paint);
+                canvas.drawLine(x + 15, y - 15, x - 15, y + 15, paint);
             }
         });
 
@@ -146,9 +147,9 @@ public class AudiogramaActivity extends AppCompatActivity {
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
 
         GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
-        gridLabel.setHorizontalAxisTitle("Frequencia em Hz");
-        gridLabel.setVerticalAxisTitle("Intensidade em dB");
-        gridLabel.getGridStyle(0);
+        gridLabel.setHorizontalAxisTitle("Hz");
+        gridLabel.setVerticalAxisTitle("dB NA");
+        gridLabel.setGridStyle(GridLabelRenderer.GridStyle.BOTH);
 
         graph.getViewport().setMinX(0);
         graph.getViewport().setMaxX(9000);

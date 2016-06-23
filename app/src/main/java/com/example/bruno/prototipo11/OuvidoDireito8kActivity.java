@@ -93,243 +93,6 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                     }
 
 
-//                    switch (dB){
-//                        case 1:
-//                            if (flagOuviu != 0) {
-//                                i1 += 1;
-//                                flagOuviu = 0;
-//                                if (j1 != 0) {
-//                                    i1 += 1;
-//                                    j1 = 0;
-//                                }else if(i1 >= 2) {
-//                                    finalErro();
-//                                }
-//                            }else {
-//                                dB = 2;
-//                                i1 -= 1;
-//                                j1 += 1;
-//                                amp = 0.1;
-//                            }
-//                            break;
-//                        case 2:
-//                            if (flagOuviu != 0) {
-//                                i2 += 1;
-//                                flagOuviu = 0;
-//                                if (j2 != 0) {
-//                                    i2 += 1;
-//                                    j2 = 0;
-//                                }else if(j1 != 0) {
-//                                    dB = 1;
-//                                    j1 -= 2;
-//                                    amp = 0.01;
-//                                }else if(i2 >= 2) {
-//                                    mandarResultado();
-//                                }else{
-//                                    dB = 1;
-//                                    amp = 0.01;
-//                                }
-//                            }else {
-//                                dB = 3;
-//                                i2 -= 1;
-//                                j2 += 1;
-//                                amp = 1;
-//                            }
-//                            break;
-//                        case 3:
-//                            if (flagOuviu != 0) {
-//                                i3 += 1;
-//                                flagOuviu = 0;
-//                                if (j3 != 0) {
-//                                    i3 += 1;
-//                                    j3 = 0;
-//                                }else if(j2 != 0) {
-//                                    dB = 2;
-//                                    j2 -= 2;
-//                                    amp = 0.1;
-//                                }else if(i3 >= 2) {
-//                                    mandarResultado();
-//                                }else{
-//                                    dB = 2;
-//                                    amp = 0.1;
-//                                }
-//                            }else {
-//                                dB = 4;
-//                                i3 -= 1;
-//                                j3 += 1;
-//                                amp = 10;
-//                            }
-//                            break;
-//                        case 4:
-//                            if (flagOuviu != 0) {
-//                                i4 += 1;
-//                                flagOuviu = 0;
-//                                if (j4 != 0) {
-//                                    i4 += 1;
-//                                    j4 = 0;
-//                                }else if(j3 != 0) {
-//                                    dB = 3;
-//                                    j3 -= 2;
-//                                    amp = 1;
-//                                }else if(i4 >= 2) {
-//                                    mandarResultado();
-//                                }else{
-//                                    dB = 3;
-//                                    amp = 1;
-//                                }
-//                            }else {
-//                                dB = 5;
-//                                i4 -= 1;
-//                                j4 += 1;
-//                                amp = 100;
-//                            }
-//                            break;
-//                        case 5:
-//                            if (flagOuviu != 0) {
-//                                i5 += 1;
-//                                flagOuviu = 0;
-//                                if (j5 != 0) {
-//                                    i5 += 1;
-//                                    j5 = 0;
-//                                }else if(j4 != 0) {
-//                                    flagOuviu = 0;
-//                                    dB = 4;
-//                                    j4 -= 2;
-//                                    amp = 10;
-//                                }else if(i5 >= 2) {
-//                                    mandarResultado();
-//                                }else{
-//                                    dB = 4;
-//                                    amp = 10;
-//                                }
-//                            }else {
-//                                dB = 6;
-//                                i5 -= 1;
-//                                j5 += 1;
-//                                amp = 1000;
-//                            }
-//                            break;
-//                        case 6:
-//                            if (flagOuviu != 0) {
-//                                i6 += 1;
-//                                flagOuviu = 0;
-//                                if (j6 != 0) {
-//                                    i6 += 1;
-//                                    j6 = 0;
-//                                }else if(j5 != 0) {
-//                                    dB = 5;
-//                                    j5 -= 2;
-//                                    amp = 100;
-//                                }else if(i6 >= 2) {
-//                                    mandarResultado();
-//                                }else{
-//                                    dB = 5;
-//                                    amp = 100;
-//                                }
-//                            }else {
-//                                dB = 7;
-//                                i6 -= 1;
-//                                j6 += 1;
-//                                amp = 10000;
-//                            }
-//                            break;
-//                        case 7:
-//                            if (flagOuviu != 0) {
-//                                i7 += 1;
-//                                flagOuviu = 0;
-//                                if (j7 != 0) {
-//                                    i7 += 1;
-//                                    j7 = 0;
-//                                }else if(j6 != 0) {
-//                                    dB = 6;
-//                                    j6 -= 2;
-//                                    amp = 1000;
-//                                }else if(i7 >= 2) {
-//                                    mandarResultado();
-//                                }else{
-//                                    dB = 6;
-//                                    amp = 1000;
-//                                }
-//                            }else {
-//                                dB = 8;
-//                                i7 -= 1;
-//                                j7 += 1;
-//                                amp = 100000;
-//                            }
-//                            break;
-//                        case 8:
-//                            if (flagOuviu != 0) {
-//                                i8 += 1;
-//                                flagOuviu = 0;
-//                                if (j8 != 0) {
-//                                    i8 += 1;
-//                                    j8 = 0;
-//                                }else if(j7 != 0) {
-//                                    dB = 7;
-//                                    j7 -= 2;
-//                                    amp = 10000;
-//                                }else if(i8 >= 2) {
-//                                    mandarResultado();
-//                                }else{
-//                                    dB = 7;
-//                                    amp = 10000;
-//                                }
-//                            }else {
-//                                dB = 9;
-//                                i8 -= 1;
-//                                j8 += 1;
-//                                amp = 1000000;
-//                            }
-//                            break;
-//                        case 9:
-//                            if (flagOuviu != 0) {
-//                                i9 += 1;
-//                                flagOuviu = 0;
-//                                if (j9 != 0) {
-//                                    i9 += 1;
-//                                    j9 = 1;
-//                                }else if(j8 != 0) {
-//                                    dB = 8;
-//                                    j8 -= 2;
-//                                    amp = 100000;
-//                                }else if(i9 >= 2) {
-//                                    mandarResultado();
-//                                }else{
-//                                    dB = 8;
-//                                    amp = 100000;
-//                                }
-//                            }else {
-//                                dB = 10;
-//                                i9 -= 1;
-//                                j9 += 1;
-//                                amp = 10000000;
-//                            }
-//                            break;
-//                        case 10:
-//                            if (flagOuviu != 0) {
-//                                i10 += 1;
-//                                if(j9 != 0) {
-//                                    flagOuviu = 0;
-//                                    dB = 3;
-//                                    j9 -= 2;
-//                                    amp = 1000000;
-//                                }else if(i10 >= 2) {
-//                                    mandarResultado();
-//                                }else{
-//                                    flagOuviu = 0;
-//                                    dB = 9;
-//                                    amp = 1000000;
-//                                }
-//                            }else {
-//                                i10 -= 1;
-//                                j10 += 1;
-//                                if (j10 >= 3){
-//                                    finalErro();
-//                                }
-//                            }
-//                            break;
-//                    }
-
-
                     switch (dB){
                         case 1:
                             if (flagOuviu != 0) {
@@ -345,7 +108,7 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                 dB = 2;
                                 i1 -= 1;
                                 j1 += 1;
-                                amp = 0.001;
+                                amp = 1;
                             }
                             break;
                         case 2:
@@ -358,18 +121,18 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                 }else if(j1 != 0) {
                                     dB = 1;
                                     j1 -= 2;
-                                    amp = 0.0001;
+                                    amp = 0.1;
                                 }else if(i2 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 1;
-                                    amp = 0.0001;
+                                    amp = 0.1;
                                 }
                             }else {
                                 dB = 3;
                                 i2 -= 1;
                                 j2 += 1;
-                                amp = 0.01;
+                                amp = 10;
                             }
                             break;
                         case 3:
@@ -382,18 +145,18 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                 }else if(j2 != 0) {
                                     dB = 2;
                                     j2 -= 2;
-                                    amp = 0.001;
+                                    amp = 1;
                                 }else if(i3 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 2;
-                                    amp = 0.001;
+                                    amp = 1;
                                 }
                             }else {
                                 dB = 4;
                                 i3 -= 1;
                                 j3 += 1;
-                                amp = 0.1;
+                                amp = 100;
                             }
                             break;
                         case 4:
@@ -406,18 +169,18 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                 }else if(j3 != 0) {
                                     dB = 3;
                                     j3 -= 2;
-                                    amp = 0.01;
+                                    amp = 10;
                                 }else if(i4 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 3;
-                                    amp = 0.01;
+                                    amp = 10;
                                 }
                             }else {
                                 dB = 5;
                                 i4 -= 1;
                                 j4 += 1;
-                                amp = 1;
+                                amp = 1000;
                             }
                             break;
                         case 5:
@@ -431,18 +194,18 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                     flagOuviu = 0;
                                     dB = 4;
                                     j4 -= 2;
-                                    amp = 0.1;
+                                    amp = 100;
                                 }else if(i5 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 4;
-                                    amp = 0.1;
+                                    amp = 100;
                                 }
                             }else {
                                 dB = 6;
                                 i5 -= 1;
                                 j5 += 1;
-                                amp = 10;
+                                amp = 10000;
                             }
                             break;
                         case 6:
@@ -450,12 +213,12 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                 i6 += 1;
                                 flagOuviu = 0;
                                 if (j6 != 0) {
-                                    i6 += 1;
+                                    i6 += 1000;
                                     j6 = 0;
                                 }else if(j5 != 0) {
                                     dB = 5;
                                     j5 -= 2;
-                                    amp = 1;
+                                    amp = 1000;
                                 }else if(i6 >= 2) {
                                     mandarResultado();
                                 }else{
@@ -466,7 +229,7 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                 dB = 7;
                                 i6 -= 1;
                                 j6 += 1;
-                                amp = 100;
+                                amp = 100000;
                             }
                             break;
                         case 7:
@@ -479,18 +242,18 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                 }else if(j6 != 0) {
                                     dB = 6;
                                     j6 -= 2;
-                                    amp = 10;
+                                    amp = 10000;
                                 }else if(i7 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 6;
-                                    amp = 10;
+                                    amp = 10000;
                                 }
                             }else {
                                 dB = 8;
                                 i7 -= 1;
                                 j7 += 1;
-                                amp = 1000;
+                                amp = 1000000;
                             }
                             break;
                         case 8:
@@ -503,18 +266,18 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                 }else if(j7 != 0) {
                                     dB = 7;
                                     j7 -= 2;
-                                    amp = 100;
+                                    amp = 100000;
                                 }else if(i8 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 7;
-                                    amp = 100;
+                                    amp = 100000;
                                 }
                             }else {
                                 dB = 9;
                                 i8 -= 1;
                                 j8 += 1;
-                                amp = 10000;
+                                amp = 10000000;
                             }
                             break;
                         case 9:
@@ -527,18 +290,18 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                 }else if(j8 != 0) {
                                     dB = 8;
                                     j8 -= 2;
-                                    amp = 1000;
+                                    amp = 100000;
                                 }else if(i9 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 8;
-                                    amp = 1000;
+                                    amp = 1000000;
                                 }
                             }else {
                                 dB = 10;
                                 i9 -= 1;
                                 j9 += 1;
-                                amp = 100000;
+                                amp = 100000000;
                             }
                             break;
                         case 10:
@@ -548,13 +311,13 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                                     flagOuviu = 0;
                                     dB = 9;
                                     j9 -= 2;
-                                    amp = 10000;
+                                    amp = 10000000;
                                 }else if(i10 >= 2) {
                                     mandarResultado();
                                 }else{
                                     flagOuviu = 0;
                                     dB = 9;
-                                    amp = 10000;
+                                    amp = 10000000;
                                 }
                             }else {
                                 i10 -= 1;
@@ -565,7 +328,6 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
                             }
                             break;
                     }
-
                 }
 
                 audioTrack.stop();

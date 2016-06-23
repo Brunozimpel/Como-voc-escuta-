@@ -109,7 +109,7 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                 dB = 2;
                                 i1 -= 1;
                                 j1 += 1;
-                                amp = 0.001;
+                                amp = 1;
                             }
                             break;
                         case 2:
@@ -122,18 +122,18 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                 }else if(j1 != 0) {
                                     dB = 1;
                                     j1 -= 2;
-                                    amp = 0.0001;
+                                    amp = 0.1;
                                 }else if(i2 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 1;
-                                    amp = 0.0001;
+                                    amp = 0.1;
                                 }
                             }else {
                                 dB = 3;
                                 i2 -= 1;
                                 j2 += 1;
-                                amp = 0.01;
+                                amp = 10;
                             }
                             break;
                         case 3:
@@ -146,18 +146,18 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                 }else if(j2 != 0) {
                                     dB = 2;
                                     j2 -= 2;
-                                    amp = 0.001;
+                                    amp = 1;
                                 }else if(i3 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 2;
-                                    amp = 0.001;
+                                    amp = 1;
                                 }
                             }else {
                                 dB = 4;
                                 i3 -= 1;
                                 j3 += 1;
-                                amp = 0.1;
+                                amp = 100;
                             }
                             break;
                         case 4:
@@ -170,18 +170,18 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                 }else if(j3 != 0) {
                                     dB = 3;
                                     j3 -= 2;
-                                    amp = 0.01;
+                                    amp = 10;
                                 }else if(i4 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 3;
-                                    amp = 0.01;
+                                    amp = 10;
                                 }
                             }else {
                                 dB = 5;
                                 i4 -= 1;
                                 j4 += 1;
-                                amp = 1;
+                                amp = 1000;
                             }
                             break;
                         case 5:
@@ -195,18 +195,18 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                     flagOuviu = 0;
                                     dB = 4;
                                     j4 -= 2;
-                                    amp = 0.1;
+                                    amp = 100;
                                 }else if(i5 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 4;
-                                    amp = 0.1;
+                                    amp = 100;
                                 }
                             }else {
                                 dB = 6;
                                 i5 -= 1;
                                 j5 += 1;
-                                amp = 10;
+                                amp = 10000;
                             }
                             break;
                         case 6:
@@ -214,12 +214,12 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                 i6 += 1;
                                 flagOuviu = 0;
                                 if (j6 != 0) {
-                                    i6 += 1;
+                                    i6 += 1000;
                                     j6 = 0;
                                 }else if(j5 != 0) {
                                     dB = 5;
                                     j5 -= 2;
-                                    amp = 1;
+                                    amp = 1000;
                                 }else if(i6 >= 2) {
                                     mandarResultado();
                                 }else{
@@ -230,7 +230,7 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                 dB = 7;
                                 i6 -= 1;
                                 j6 += 1;
-                                amp = 100;
+                                amp = 100000;
                             }
                             break;
                         case 7:
@@ -243,18 +243,18 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                 }else if(j6 != 0) {
                                     dB = 6;
                                     j6 -= 2;
-                                    amp = 10;
+                                    amp = 10000;
                                 }else if(i7 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 6;
-                                    amp = 10;
+                                    amp = 10000;
                                 }
                             }else {
                                 dB = 8;
                                 i7 -= 1;
                                 j7 += 1;
-                                amp = 1000;
+                                amp = 1000000;
                             }
                             break;
                         case 8:
@@ -267,18 +267,18 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                 }else if(j7 != 0) {
                                     dB = 7;
                                     j7 -= 2;
-                                    amp = 100;
+                                    amp = 100000;
                                 }else if(i8 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 7;
-                                    amp = 100;
+                                    amp = 100000;
                                 }
                             }else {
                                 dB = 9;
                                 i8 -= 1;
                                 j8 += 1;
-                                amp = 10000;
+                                amp = 10000000;
                             }
                             break;
                         case 9:
@@ -291,18 +291,18 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                 }else if(j8 != 0) {
                                     dB = 8;
                                     j8 -= 2;
-                                    amp = 1000;
+                                    amp = 100000;
                                 }else if(i9 >= 2) {
                                     mandarResultado();
                                 }else{
                                     dB = 8;
-                                    amp = 1000;
+                                    amp = 1000000;
                                 }
                             }else {
                                 dB = 10;
                                 i9 -= 1;
                                 j9 += 1;
-                                amp = 100000;
+                                amp = 100000000;
                             }
                             break;
                         case 10:
@@ -312,13 +312,13 @@ public class OuvidoEsquerdo4kActivity extends AppCompatActivity {
                                     flagOuviu = 0;
                                     dB = 9;
                                     j9 -= 2;
-                                    amp = 10000;
+                                    amp = 10000000;
                                 }else if(i10 >= 2) {
                                     mandarResultado();
                                 }else{
                                     flagOuviu = 0;
                                     dB = 9;
-                                    amp = 10000;
+                                    amp = 10000000;
                                 }
                             }else {
                                 i10 -= 1;

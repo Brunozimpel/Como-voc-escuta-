@@ -365,15 +365,17 @@ public class OuvidoDireito4kActivity extends AppCompatActivity{
     }
 
     private void mandarResultado(){
-        String result0 = getIntent().getExtras().getString("result0");
+
         String result1 = getIntent().getExtras().getString("result1");
         String result2 = getIntent().getExtras().getString("result2");
+        String result3 = getIntent().getExtras().getString("result3");
 
         Intent intent = new Intent(this,OuvidoDireito8kActivity.class);
 
-        intent.putExtra("result0", result0);
         intent.putExtra("result1", result1);
         intent.putExtra("result2", result2);
+        intent.putExtra("result3", result3);
+
 
         switch (dB){
             case 1:

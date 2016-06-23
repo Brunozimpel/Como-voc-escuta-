@@ -22,15 +22,21 @@
 
         <activity android:name=".CalibracaoActivity"/>
         <activity android:name=".PreCalibracao"/>
-        <activity android:name=".OuvidoDireito500Activity" />
+        <activity android:name=".OuvidoDireito250Activity"/>
+        <activity android:name=".OuvidoDireito500Activity"/>
         <activity android:name=".OuvidoDireito1kActivity"/>
         <activity android:name=".OuvidoDireito2kActivity"/>
+        <activity android:name=".OuvidoDireito3kActivity"/>
         <activity android:name=".OuvidoDireito4kActivity"/>
+        <activity android:name=".OuvidoDireito6kActivity"/>
         <activity android:name=".OuvidoDireito8kActivity"/>
+        <activity android:name=".OuvidoEsquerdo250Activity"/>
         <activity android:name=".OuvidoEsquerdo500Activity"/>
         <activity android:name=".OuvidoEsquerdo1kActivity"/>
         <activity android:name=".OuvidoEsquerdo2kActivity"/>
+        <activity android:name=".OuvidoEsquerdo3kActivity"/>
         <activity android:name=".OuvidoEsquerdo4kActivity"/>
+        <activity android:name=".OuvidoEsquerdo6kActivity"/>
         <activity android:name=".OuvidoEsquerdo8kActivity"/>
         <activity android:name=".Fim1Activity"/>
         <activity android:name=".Fim2Activity" />

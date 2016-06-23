@@ -1,6 +1,5 @@
 package com.example.bruno.prototipo11;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -11,9 +10,9 @@ import android.view.View;
 import android.widget.TextView;
 
 /**
- * Created by Guilherme on 18/05/16.
+ * Created by Guilherme on 23/06/16.
  */
-public class OuvidoDireito500Activity extends AppCompatActivity {
+public class OuvidoEsquerdo6kActivity extends AppCompatActivity {
 
     Thread t;
     boolean isRunning = true;
@@ -54,7 +53,7 @@ public class OuvidoDireito500Activity extends AppCompatActivity {
         setContentView(R.layout.activity_ouvidodireito);
 
         TextView tv = (TextView) findViewById(R.id.freq);
-        tv.setText("500 Hz");
+        tv.setText("6k Hz");
 
         t = new Thread() {
             public void run() {
@@ -65,12 +64,12 @@ public class OuvidoDireito500Activity extends AppCompatActivity {
                         sr, AudioFormat.CHANNEL_OUT_MONO,
                         AudioFormat.ENCODING_PCM_16BIT, sr,
                         AudioTrack.MODE_STREAM);
-                audioTrack.setStereoVolume(0,1);
+                audioTrack.setStereoVolume(1,0);
 
                 short samples[] = new short[sr];
                 double amp = 100;
                 double twopi = 2.*Math.PI;
-                double fr = 500.f;
+                double fr = 6000.f;
                 double ph = 0.0;
 
 
@@ -91,6 +90,7 @@ public class OuvidoDireito500Activity extends AppCompatActivity {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+
 
 
                     switch (dB){
@@ -328,7 +328,6 @@ public class OuvidoDireito500Activity extends AppCompatActivity {
                             }
                             break;
                     }
-
                 }
 
                 audioTrack.stop();
@@ -367,6 +366,8 @@ public class OuvidoDireito500Activity extends AppCompatActivity {
 
     private void mandarResultado(){
 
+        String result25 = getIntent().getExtras().getString("result25");
+        String result0 = getIntent().getExtras().getString("result0");
         String result1 = getIntent().getExtras().getString("result1");
         String result2 = getIntent().getExtras().getString("result2");
         String result3 = getIntent().getExtras().getString("result3");
@@ -374,8 +375,15 @@ public class OuvidoDireito500Activity extends AppCompatActivity {
         String result6 = getIntent().getExtras().getString("result6");
         String result8 = getIntent().getExtras().getString("result8");
 
-        Intent intent = new Intent(this,OuvidoDireito250Activity.class);
+        String result10 = getIntent().getExtras().getString("result10");
+        String result20 = getIntent().getExtras().getString("result20");
+        String result30 = getIntent().getExtras().getString("result30");
+        String result40 = getIntent().getExtras().getString("result40");
 
+        Intent intent = new Intent(this,OuvidoEsquerdo8kActivity.class);
+
+        intent.putExtra("result25", result25);
+        intent.putExtra("result0", result0);
         intent.putExtra("result1", result1);
         intent.putExtra("result2", result2);
         intent.putExtra("result3", result3);
@@ -383,36 +391,41 @@ public class OuvidoDireito500Activity extends AppCompatActivity {
         intent.putExtra("result6", result6);
         intent.putExtra("result8", result8);
 
+        intent.putExtra("result10", result10);
+        intent.putExtra("result20", result20);
+        intent.putExtra("result30", result30);
+        intent.putExtra("result40", result40);
+
         switch (dB){
             case 1:
-                intent.putExtra("result0", "-10");
+                intent.putExtra("result1", "-10");
                 break;
             case 2:
-                intent.putExtra("result0", "0");
+                intent.putExtra("result1", "0");
                 break;
             case 3:
-                intent.putExtra("result0", "10");
+                intent.putExtra("result1", "10");
                 break;
             case 4:
-                intent.putExtra("result0", "20");
+                intent.putExtra("result1", "20");
                 break;
             case 5:
-                intent.putExtra("result0", "30");
+                intent.putExtra("result1", "30");
                 break;
             case 6:
-                intent.putExtra("result0", "40");
+                intent.putExtra("result1", "40");
                 break;
             case 7:
-                intent.putExtra("result0", "50");
+                intent.putExtra("result1", "50");
                 break;
             case 8:
-                intent.putExtra("result0", "60");
+                intent.putExtra("result1", "60");
                 break;
             case 9:
-                intent.putExtra("result0", "70");
+                intent.putExtra("result1", "70");
                 break;
             case 10:
-                intent.putExtra("result0", "80");
+                intent.putExtra("result1", "80");
                 break;
         }
 
@@ -423,12 +436,6 @@ public class OuvidoDireito500Activity extends AppCompatActivity {
         Intent intent = new Intent(this,Fim2Activity.class);
         startActivity(intent);
     }
-
-
-
-
-
 }
-
 
 

@@ -67,7 +67,7 @@ public class FimDirActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, OuvidoEsquerdo1kActivity.class);
 
-        intent.putExtra("result25",result25);
+        intent.putExtra("result25", result25);
         intent.putExtra("result0", result0);
         intent.putExtra("result1", result1);
         intent.putExtra("result2", result2);

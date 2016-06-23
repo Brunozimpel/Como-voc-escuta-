@@ -69,23 +69,25 @@ public class AudiogramaActivity extends AppCompatActivity {
 
         GraphView graph = (GraphView) findViewById(R.id.graph);
 
+        graph.setTitle("AUDIOGRAMA");
+
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
-                new DataPoint(500, x),
-                new DataPoint(1000, y),
-                new DataPoint(2000, z),
-                new DataPoint(4000, s),
-                new DataPoint(8000, t)
+                new DataPoint(1500, x),
+                new DataPoint(3000, y),
+                new DataPoint(4500, z),
+                new DataPoint(6000, s),
+                new DataPoint(7500, t)
         });
         series.setColor(Color.RED);
         series.setThickness(4);
         graph.addSeries(series);
 
         LineGraphSeries<DataPoint> series2 = new LineGraphSeries<DataPoint>(new DataPoint[]{
-                new DataPoint(500, x2),
-                new DataPoint(1000, y2),
-                new DataPoint(2000, z2),
-                new DataPoint(4000, s2),
-                new DataPoint(8000, t2)
+                new DataPoint(1500, x2),
+                new DataPoint(3000, y2),
+                new DataPoint(4500, z2),
+                new DataPoint(6000, s2),
+                new DataPoint(7500, t2)
         });
 
 
@@ -101,11 +103,11 @@ public class AudiogramaActivity extends AppCompatActivity {
         series2.setColor(Color.BLUE);
 
         PointsGraphSeries<DataPoint> seriesp1 = new PointsGraphSeries<DataPoint>(new DataPoint[]{
-                new DataPoint(500, x),
-                new DataPoint(1000, y),
-                new DataPoint(2000, z),
-                new DataPoint(4000, s),
-                new DataPoint(8000, t)
+                new DataPoint(1500, x),
+                new DataPoint(3000, y),
+                new DataPoint(4500, z),
+                new DataPoint(6000, s),
+                new DataPoint(7500, t)
 
         });
         seriesp1.setColor(Color.RED);
@@ -114,11 +116,11 @@ public class AudiogramaActivity extends AppCompatActivity {
         graph.addSeries(seriesp1);
 
         PointsGraphSeries<DataPoint> seriesp2 = new PointsGraphSeries<DataPoint>(new DataPoint[]{
-                new DataPoint(500, x2),
-                new DataPoint(1000, y2),
-                new DataPoint(2000, z2),
-                new DataPoint(4000, s2),
-                new DataPoint(8000, t2)
+                new DataPoint(1500, x2),
+                new DataPoint(3000, y2),
+                new DataPoint(4500, z2),
+                new DataPoint(6000, s2),
+                new DataPoint(7500, t2)
 
         });
 
@@ -147,9 +149,9 @@ public class AudiogramaActivity extends AppCompatActivity {
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
 
         GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
-        gridLabel.setHorizontalAxisTitle("Hz");
-        gridLabel.setVerticalAxisTitle("dB NA");
-        gridLabel.setGridStyle(GridLabelRenderer.GridStyle.BOTH);
+        gridLabel.setHorizontalAxisTitle("Frequencia [Hz]");
+        gridLabel.setVerticalAxisTitle("Intensidade [dB NA]");
+//        gridLabel.setGridStyle(0);
 
         graph.getViewport().setMinX(0);
         graph.getViewport().setMaxX(9000);

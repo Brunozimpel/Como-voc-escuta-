@@ -5,22 +5,22 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.jjoe64.graphview.DefaultLabelFormatter;
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.GridLabelRenderer;
 import com.jjoe64.graphview.LegendRenderer;
-import com.jjoe64.graphview.helper.DateAsXAxisLabelFormatter;
 import com.jjoe64.graphview.helper.StaticLabelsFormatter;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.DataPointInterface;
 import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.series.PointsGraphSeries;
+
+import java.text.NumberFormat;
 
 /**
  * Created by Guilherme on 23/06/16.
@@ -76,9 +76,9 @@ public class AudiogramaActivity extends AppCompatActivity {
                 new DataPoint(4000, s),
                 new DataPoint(8000, t)
         });
-        graph.addSeries(series);
         series.setColor(Color.RED);
-
+        series.setThickness(5);
+        graph.addSeries(series);
 
         LineGraphSeries<DataPoint> series2 = new LineGraphSeries<DataPoint>(new DataPoint[]{
                 new DataPoint(500, x2),
@@ -88,6 +88,14 @@ public class AudiogramaActivity extends AppCompatActivity {
                 new DataPoint(8000, t2)
         });
 
+
+        Paint paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(10);
+        paint.setPathEffect(new DashPathEffect(new float[]{20, 20}, 0));
+        paint.setColor(Color.BLUE);
+        series2.setCustomPaint(paint);
+        series2.setThickness(5);
 
         graph.addSeries(series2);
         series2.setColor(Color.BLUE);
@@ -125,17 +133,29 @@ public class AudiogramaActivity extends AppCompatActivity {
         });
 
 
-        seriesp1.setTitle("Direito");
-        seriesp2.setTitle("Esquerdo");
+        series.setTitle("Direito");
+        series2.setTitle("Esquerdo");
         graph.getLegendRenderer().setVisible(true);
         graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
 
-        Paint paint = new Paint();
-        paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeWidth(10);
-        paint.setPathEffect(new DashPathEffect(new float[]{20, 20}, 0));
-        paint.setColor(Color.BLUE);
-        series2.setCustomPaint(paint);
+        // use static labels for horizontal and vertical labels
+        StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
+        staticLabelsFormatter.setHorizontalLabels(new String[] {" ", "500", "1000", "2000","4000","8000"," "});
+        staticLabelsFormatter.setVerticalLabels(new String[] {"-10", "0", "10", "20","30","40","50","60","70","80"});
+
+        graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
+
+        GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
+        gridLabel.setHorizontalAxisTitle("Frequencia em Hz");
+        gridLabel.setVerticalAxisTitle("Intensidade em dB");
+        gridLabel.getGridStyle(0);
+
+        graph.getViewport().setMinX(0);
+        graph.getViewport().setMaxX(9000);
+        graph.getViewport().setXAxisBoundsManual(true);
+        graph.getViewport().setMaxY(80);
+        graph.getViewport().setMinY(-10);
+        graph.getViewport().setYAxisBoundsManual(true);
 
 
     }

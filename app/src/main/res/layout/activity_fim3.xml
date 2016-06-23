@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/fim3"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:textSize="30sp"
         android:id="@+id/textView4"
@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/quinhentos"
+        android:id="@+id/duzentos"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:textSize="20sp"
@@ -25,8 +25,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/umKHz"
-        android:layout_marginTop="15dp"
+        android:id="@+id/quinhentos"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:textSize="20sp"
         android:layout_gravity="center_horizontal" />
@@ -34,8 +34,24 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/umKHz"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/doisKHz"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tresKHz"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:textSize="20sp"
         android:layout_gravity="center_horizontal" />
@@ -43,7 +59,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/quatroKHz"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seisKHz"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:textSize="20sp"
         android:layout_gravity="center_horizontal" />
@@ -51,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/oitoKHz"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:textSize="20sp"
         android:layout_gravity="center_horizontal" />
@@ -61,7 +85,7 @@
         android:layout_height="wrap_content"
         android:text="@string/button_3"
         android:onClick="testeEsquerdo"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/button3"
         android:layout_gravity="center_horizontal" />
 

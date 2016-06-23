@@ -25,7 +25,8 @@ import com.jjoe64.graphview.series.PointsGraphSeries;
  */
 public class AudiogramaActivity extends AppCompatActivity {
 
-    private String quinhentos, umk, doisk, quatrok, oitok, quinhentosEsq, umkEsq, doiskEsq, quatrokEsq, oitokEsq;
+    private String duzentos,quinhentos, umk, doisk, tresk, quatrok, seisk, oitok,
+            duzentosEsq,quinhentosEsq, umkEsq, doiskEsq,treskEsq, quatrokEsq, seiskEsq, oitokEsq;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -39,28 +40,40 @@ public class AudiogramaActivity extends AppCompatActivity {
 
         Intent i = this.getIntent();
 
+        duzentos = i.getStringExtra("result25");
         quinhentos = i.getStringExtra("result0");
         umk = i.getStringExtra("result1");
         doisk = i.getStringExtra("result2");
+        tresk = i.getStringExtra("result3");
         quatrok = i.getStringExtra("result4");
+        seisk = i.getStringExtra("result6");
         oitok = i.getStringExtra("result8");
 
+        duzentosEsq = i.getStringExtra("result250");
         quinhentosEsq = i.getStringExtra("result00");
         umkEsq = i.getStringExtra("result10");
         doiskEsq = i.getStringExtra("result20");
+        treskEsq = i.getStringExtra("result30");
         quatrokEsq = i.getStringExtra("result40");
+        seiskEsq = i.getStringExtra("result60");
         oitokEsq = i.getStringExtra("result80");
 
+        int w = -(Integer.parseInt(duzentos));
         int x = -(Integer.parseInt(quinhentos));
         int y = -(Integer.parseInt(umk));
         int z = -(Integer.parseInt(doisk));
+        int r = -(Integer.parseInt(tresk));
         int s = -(Integer.parseInt(quatrok));
+        int k = -(Integer.parseInt(seisk));
         int t = -(Integer.parseInt(oitok));
 
+        int w2 = -(Integer.parseInt(duzentosEsq));
         int x2 = -(Integer.parseInt(quinhentosEsq));
         int y2 = -(Integer.parseInt(umkEsq));
         int z2 = -(Integer.parseInt(doiskEsq));
+        int r2 = -(Integer.parseInt(treskEsq));
         int s2 = -(Integer.parseInt(quatrokEsq));
+        int k2 = -(Integer.parseInt(seisk));
         int t2 = -(Integer.parseInt(oitokEsq));
 
 
@@ -70,22 +83,28 @@ public class AudiogramaActivity extends AppCompatActivity {
         graph.setTitle("AUDIOGRAMA");
 
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
-                new DataPoint(1500, x),
-                new DataPoint(3000, y),
-                new DataPoint(4500, z),
-                new DataPoint(6000, s),
-                new DataPoint(7500, t)
+                new DataPoint(2000,w),
+                new DataPoint(4000, x),
+                new DataPoint(6000, y),
+                new DataPoint(8000, z),
+                new DataPoint(9000, r),
+                new DataPoint(10000, s),
+                new DataPoint(11000, k),
+                new DataPoint(12000, t)
         });
         series.setColor(Color.RED);
         series.setThickness(4);
         graph.addSeries(series);
 
         LineGraphSeries<DataPoint> series2 = new LineGraphSeries<DataPoint>(new DataPoint[]{
-                new DataPoint(1500, x2),
-                new DataPoint(3000, y2),
-                new DataPoint(4500, z2),
-                new DataPoint(6000, s2),
-                new DataPoint(7500, t2)
+                new DataPoint(2000,w2),
+                new DataPoint(4000, x2),
+                new DataPoint(6000, y2),
+                new DataPoint(8000, z2),
+                new DataPoint(9000, r2),
+                new DataPoint(10000, s2),
+                new DataPoint(11000,k2),
+                new DataPoint(12000, t2)
         });
 
 
@@ -101,11 +120,14 @@ public class AudiogramaActivity extends AppCompatActivity {
         series2.setColor(Color.BLUE);
 
         PointsGraphSeries<DataPoint> seriesp1 = new PointsGraphSeries<DataPoint>(new DataPoint[]{
-                new DataPoint(1500, x),
-                new DataPoint(3000, y),
-                new DataPoint(4500, z),
-                new DataPoint(6000, s),
-                new DataPoint(7500, t)
+                new DataPoint(2000,w),
+                new DataPoint(4000, x),
+                new DataPoint(6000, y),
+                new DataPoint(8000, z),
+                new DataPoint(9000, r),
+                new DataPoint(10000, s),
+                new DataPoint(11000, k),
+                new DataPoint(12000, t)
 
         });
         seriesp1.setColor(Color.RED);
@@ -114,11 +136,14 @@ public class AudiogramaActivity extends AppCompatActivity {
         graph.addSeries(seriesp1);
 
         PointsGraphSeries<DataPoint> seriesp2 = new PointsGraphSeries<DataPoint>(new DataPoint[]{
-                new DataPoint(1500, x2),
-                new DataPoint(3000, y2),
-                new DataPoint(4500, z2),
-                new DataPoint(6000, s2),
-                new DataPoint(7500, t2)
+                new DataPoint(2000,w2),
+                new DataPoint(4000, x2),
+                new DataPoint(6000, y2),
+                new DataPoint(8000, z2),
+                new DataPoint(9000, r2),
+                new DataPoint(10000, s2),
+                new DataPoint(11000, k2),
+                new DataPoint(12000, t2)
 
         });
 
@@ -134,13 +159,13 @@ public class AudiogramaActivity extends AppCompatActivity {
         });
 
 
-        series.setTitle("Direito");
-        series2.setTitle("Esquerdo");
-        graph.getLegendRenderer().setVisible(true);
-        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
+//        series.setTitle("Direito");
+//        series2.setTitle("Esquerdo");
+//        graph.getLegendRenderer().setVisible(true);
+//        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
 
         StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
-        staticLabelsFormatter.setHorizontalLabels(new String[] {" ", "500", "1000", "2000","4000","8000"," "});
+        staticLabelsFormatter.setHorizontalLabels(new String[] {" ","250", "500", "1000", "2000","4000","8000"," "});
         staticLabelsFormatter.setVerticalLabels(new String[] {"80", "70", "60", "50","40","30","20","10","0","-10"});
 
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
@@ -150,7 +175,7 @@ public class AudiogramaActivity extends AppCompatActivity {
         gridLabel.setVerticalAxisTitle("Intensidade [dB NA]");
 
         graph.getViewport().setMinX(0);
-        graph.getViewport().setMaxX(9000);
+        graph.getViewport().setMaxX(14000);
         graph.getViewport().setXAxisBoundsManual(true);
         graph.getViewport().setMaxY(10);
         graph.getViewport().setMinY(-80);

@@ -612,34 +612,34 @@ public class OuvidoDireito1kActivity extends AppCompatActivity {
 
         switch (dB){
             case 1:
-                intent.putExtra("result1", "-10 dB");
+                intent.putExtra("result1", "-10");
                 break;
             case 2:
-                intent.putExtra("result1", "0 dB");
+                intent.putExtra("result1", "0");
                 break;
             case 3:
-                intent.putExtra("result1", "10 dB");
+                intent.putExtra("result1", "10");
                 break;
             case 4:
-                intent.putExtra("result1", "20 dB");
+                intent.putExtra("result1", "20");
                 break;
             case 5:
-                intent.putExtra("result1", "30 dB");
+                intent.putExtra("result1", "30");
                 break;
             case 6:
-                intent.putExtra("result1", "40 dB");
+                intent.putExtra("result1", "40");
                 break;
             case 7:
-                intent.putExtra("result1", "50 dB");
+                intent.putExtra("result1", "50");
                 break;
             case 8:
-                intent.putExtra("result1", "60 dB");
+                intent.putExtra("result1", "60");
                 break;
             case 9:
-                intent.putExtra("result1", "70 dB");
+                intent.putExtra("result1", "70");
                 break;
             case 10:
-                intent.putExtra("result1", "80 dB");
+                intent.putExtra("result1", "80");
                 break;
         }
 

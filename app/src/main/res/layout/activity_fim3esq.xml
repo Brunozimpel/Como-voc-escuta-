@@ -57,5 +57,13 @@
         android:textSize="20sp"
         android:layout_gravity="center_horizontal" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="audiograma"
+        android:onClick="audiograma"
+        android:id="@+id/button4"
+        android:layout_gravity="center_horizontal" />
+
 
 </LinearLayout>

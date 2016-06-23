@@ -366,44 +366,44 @@ public class OuvidoEsquerdo2kActivity extends AppCompatActivity {
     }
 
     private void mandarResultado(){
-        String result0 = getIntent().getExtras().getString("result0");
-        String result1 = getIntent().getExtras().getString("result1");
+        String result00 = getIntent().getExtras().getString("result00");
+        String result10 = getIntent().getExtras().getString("result10");
 
         Intent intent = new Intent(this,OuvidoDireito4kActivity.class);
 
-        intent.putExtra("result0", result0);
-        intent.putExtra("result1", result1);
+        intent.putExtra("result00", result00);
+        intent.putExtra("result10", result10);
 
         switch (dB){
             case 1:
-                intent.putExtra("result2", "-10 dB");
+                intent.putExtra("result20", "-10 dB");
                 break;
             case 2:
-                intent.putExtra("result2", "0 dB");
+                intent.putExtra("result20", "0 dB");
                 break;
             case 3:
-                intent.putExtra("result2", "10 dB");
+                intent.putExtra("result20", "10 dB");
                 break;
             case 4:
-                intent.putExtra("result2", "20 dB");
+                intent.putExtra("result20", "20 dB");
                 break;
             case 5:
-                intent.putExtra("result2", "30 dB");
+                intent.putExtra("result20", "30 dB");
                 break;
             case 6:
-                intent.putExtra("result2", "40 dB");
+                intent.putExtra("result20", "40 dB");
                 break;
             case 7:
-                intent.putExtra("result2", "50 dB");
+                intent.putExtra("result20", "50 dB");
                 break;
             case 8:
-                intent.putExtra("result2", "60 dB");
+                intent.putExtra("result20", "60 dB");
                 break;
             case 9:
-                intent.putExtra("result2", "70 dB");
+                intent.putExtra("result20", "70 dB");
                 break;
             case 10:
-                intent.putExtra("result2", "80 dB");
+                intent.putExtra("result20", "80 dB");
                 break;
         }
 

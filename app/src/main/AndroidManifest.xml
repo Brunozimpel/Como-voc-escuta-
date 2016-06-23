@@ -19,14 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".CalibracaoActivity">
-
-        </activity>
-
-
-        <activity android:name=".PreCalibracao">
-
-        </activity>
+        <activity android:name=".CalibracaoActivity"/>
+        <activity android:name=".PreCalibracao"/>
         <activity android:name=".OuvidoDireito500Activity" />
         <activity android:name=".OuvidoDireito1kActivity"/>
         <activity android:name=".OuvidoDireito2kActivity"/>
@@ -40,6 +34,7 @@
         <activity android:name=".Fim1Activity"/>
         <activity android:name=".Fim2Activity" />
         <activity android:name=".Fim3Activity"/>
+        <activity android:name=".Fim3EsqActivity"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

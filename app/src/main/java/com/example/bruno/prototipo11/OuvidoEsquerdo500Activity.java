@@ -1,5 +1,6 @@
 package com.example.bruno.prototipo11;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 /**
  * Created by Guilherme on 20/06/16.
  */
-public class OuvidoEsquerdo500Activity extends AppCompatActivity {
+public class OuvidoEsquerdo500Activity extends Activity {
 
     Thread t;
     boolean isRunning = true;
@@ -268,7 +269,7 @@ public class OuvidoEsquerdo500Activity extends AppCompatActivity {
                                     j7 -= 2;
                                     amp = 100;
                                 }else if(i8 >= 2) {
-                                    mandarResultado();
+                                        mandarResultado();
                                 }else{
                                     dB = 7;
                                     amp = 100;
@@ -370,34 +371,34 @@ public class OuvidoEsquerdo500Activity extends AppCompatActivity {
 
         switch (dB){
             case 1:
-                intent.putExtra("result0", "-10 dB");
+                intent.putExtra("result00", "-10 dB");
                 break;
             case 2:
-                intent.putExtra("result0", "0 dB");
+                intent.putExtra("result00", "0 dB");
                 break;
             case 3:
-                intent.putExtra("result0", "10 dB");
+                intent.putExtra("result00", "10 dB");
                 break;
             case 4:
-                intent.putExtra("result0", "20 dB");
+                intent.putExtra("result00", "20 dB");
                 break;
             case 5:
-                intent.putExtra("result0", "30 dB");
+                intent.putExtra("result00", "30 dB");
                 break;
             case 6:
-                intent.putExtra("result0", "40 dB");
+                intent.putExtra("result00", "40 dB");
                 break;
             case 7:
-                intent.putExtra("result0", "50 dB");
+                intent.putExtra("result00", "50 dB");
                 break;
             case 8:
-                intent.putExtra("result0", "60 dB");
+                intent.putExtra("result00", "60 dB");
                 break;
             case 9:
-                intent.putExtra("result0", "70 dB");
+                intent.putExtra("result00", "70 dB");
                 break;
             case 10:
-                intent.putExtra("result0", "80 dB");
+                intent.putExtra("result00", "80 dB");
                 break;
         }
 
@@ -408,9 +409,6 @@ public class OuvidoEsquerdo500Activity extends AppCompatActivity {
         Intent intent = new Intent(this,Fim2Activity.class);
         startActivity(intent);
     }
-
-
-
 
 
 }

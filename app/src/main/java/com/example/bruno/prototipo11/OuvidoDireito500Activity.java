@@ -6,13 +6,14 @@ import android.media.AudioFormat;
 import android.media.AudioManager;
 import android.media.AudioTrack;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 /**
  * Created by Guilherme on 18/05/16.
  */
-public class OuvidoDireito500Activity extends Activity {
+public class OuvidoDireito500Activity extends AppCompatActivity {
 
     Thread t;
     boolean isRunning = true;

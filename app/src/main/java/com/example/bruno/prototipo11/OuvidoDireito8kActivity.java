@@ -420,10 +420,6 @@ public class OuvidoDireito8kActivity extends AppCompatActivity{
         startActivity(intent);
     }
 
-
-
-
-
 }
 
 

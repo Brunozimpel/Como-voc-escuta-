@@ -1,10 +1,6 @@
 package com.example.bruno.prototipo11;
 
 
-
-
-
-
 import android.content.Intent;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -24,6 +20,9 @@ import java.io.IOException;
  * Created by bruno on 18/05/2016.
  */
 public class CalibracaoActivity extends AppCompatActivity {
+//
+//    private MediaRecorder myRecorder;
+//    private String outputFile = null;
 
     private final int duration = 2; // seconds
     private final int sampleRate = 4000;
@@ -42,6 +41,63 @@ public class CalibracaoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calibracao);
 
+//        outputFile = Environment.getExternalStorageDirectory().
+//            getAbsolutePath() + "/teste.3gpp";
+//
+//        myRecorder = new MediaRecorder();
+//
+//        myRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+//        myRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+//        myRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
+//        myRecorder.setOutputFile(outputFile);
+//
+//        Intent intent;
+//        if(resultado()==1){
+//            intent = new Intent(this, OuvidoDireitoActivity.class);
+//        }else{
+//            intent = new Intent(this, Fim1Activity.class);
+//        }
+    }
+//
+//    void start_gravacao() {
+//        try {
+//            myRecorder.prepare();
+//            myRecorder.start();
+//        } catch (IllegalStateException e) {
+//            // start:it is called before prepare()
+//            // prepare: it is called after start() or before setOutputFormat()
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            // prepare() fails
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    void stop_gravacao(){
+//
+//        try {
+//            myRecorder.stop();
+//            myRecorder.release();
+//            myRecorder  = null;
+//        } catch (IllegalStateException e) {
+//            //  it is called before start()
+//            e.printStackTrace();
+//        } catch (RuntimeException e) {
+//            // no valid audio/video data has been received
+//            e.printStackTrace();
+//        }
+//    }
+//
+//
+//    int getAmplitude = myRecorder.getMaxAmplitude();
+//
+//    public int resultado(){
+//        if (getAmplitude != 0) {
+//            return 1;
+//        }else {
+//            return 0;
+//        }
+//    }
 
 
     @Override
@@ -61,6 +117,11 @@ public class CalibracaoActivity extends AppCompatActivity {
             }
         });
         thread.start();
+//            // comeca4
+//                start_gravacao();
+//                SystemClock.sleep(3000);
+//                stop_gravacao();
+//            // termina 4
     }
 
 

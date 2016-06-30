@@ -10,6 +10,7 @@
         android:layout_marginTop="160dp"
         android:gravity="center"
         android:textSize="30sp"
+        android:textColor="#FF6E1009"
         android:id="@+id/textView3"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

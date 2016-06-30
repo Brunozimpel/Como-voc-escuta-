@@ -19,6 +19,7 @@ public class FimEsqActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fim3esq);
+
         result250 = (TextView) findViewById(R.id.duzentosEsq);
         result500 = (TextView) findViewById(R.id.quinhentosEsq);
         result1k = (TextView) findViewById(R.id.umKHzEsq);
@@ -27,7 +28,6 @@ public class FimEsqActivity extends AppCompatActivity {
         result4k = (TextView) findViewById(R.id.quatroKHzEsq);
         result6k = (TextView) findViewById(R.id.seisKHzEsq);
         result8k = (TextView) findViewById(R.id.oitoKHzEsq);
-
 
 
         Intent i=this.getIntent();
@@ -41,14 +41,14 @@ public class FimEsqActivity extends AppCompatActivity {
         seiskEsq=i.getStringExtra("result60");
         oitokEsq=i.getStringExtra("result80");
 
-        result250.setText("250Hz:"+duzentosEsq + "dB");
-        result500.setText("500Hz:"+quinhentosEsq + "dB");
-        result1k.setText("1KHz:"+umkEsq + "dB");
-        result2k.setText("2KHz:"+doiskEsq + "dB");
-        result3k.setText("2KHz:"+treskEsq + "dB");
-        result4k.setText("4KHz:"+quatrokEsq + "dB");
-        result6k.setText("2KHz:"+seiskEsq + "dB");
-        result8k.setText("8KHz:"+oitokEsq + "dB");
+        result250.setText("250Hz:"+ duzentosEsq + "dB");
+        result500.setText("500Hz:"+ quinhentosEsq + "dB");
+        result1k.setText("1KHz:"+ umkEsq + "dB");
+        result2k.setText("2KHz:"+ doiskEsq + "dB");
+        result3k.setText("3KHz:"+ treskEsq + "dB");
+        result4k.setText("4KHz:"+ quatrokEsq + "dB");
+        result6k.setText("6KHz:"+ seiskEsq + "dB");
+        result8k.setText("8KHz:"+ oitokEsq + "dB");
 
 
     }

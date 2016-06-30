@@ -50,9 +50,9 @@ public class OuvidoEsquerdo250Activity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ouvidodireito);
+        setContentView(R.layout.activity_ouvidoesquerdo);
 
-        TextView tv = (TextView) findViewById(R.id.freq);
+        TextView tv = (TextView) findViewById(R.id.freqEsq);
         tv.setText("250 Hz");
 
         t = new Thread() {
@@ -360,9 +360,7 @@ public class OuvidoEsquerdo250Activity extends AppCompatActivity {
         t = null;
     }
 
-    public void ouviu(View view) {
-        flagOuviu = 1;
-    }
+    public void ouviu(View view) { flagOuviu = 1; }
 
     private void mandarResultado(){
 
@@ -404,34 +402,34 @@ public class OuvidoEsquerdo250Activity extends AppCompatActivity {
 
         switch (dB){
             case 1:
-                intent.putExtra("result1", "-10");
+                intent.putExtra("result250", "-10");
                 break;
             case 2:
-                intent.putExtra("result1", "0");
+                intent.putExtra("result250", "0");
                 break;
             case 3:
-                intent.putExtra("result1", "10");
+                intent.putExtra("result250", "10");
                 break;
             case 4:
-                intent.putExtra("result1", "20");
+                intent.putExtra("result250", "20");
                 break;
             case 5:
-                intent.putExtra("result1", "30");
+                intent.putExtra("result250", "30");
                 break;
             case 6:
-                intent.putExtra("result1", "40");
+                intent.putExtra("result250", "40");
                 break;
             case 7:
-                intent.putExtra("result1", "50");
+                intent.putExtra("result250", "50");
                 break;
             case 8:
-                intent.putExtra("result1", "60");
+                intent.putExtra("result250", "60");
                 break;
             case 9:
-                intent.putExtra("result1", "70");
+                intent.putExtra("result250", "70");
                 break;
             case 10:
-                intent.putExtra("result1", "80");
+                intent.putExtra("result250", "80");
                 break;
         }
 

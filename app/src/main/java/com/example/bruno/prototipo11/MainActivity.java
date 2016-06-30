@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void teste(View view) {
-        Intent intent = new Intent(this, OuvidoDireito500Activity.class);
+        Intent intent = new Intent(this, OuvidoDireito1kActivity.class);
         startActivity(intent);
     }
 }

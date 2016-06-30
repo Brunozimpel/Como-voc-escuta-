@@ -369,7 +369,7 @@ public class OuvidoDireito3kActivity extends AppCompatActivity {
         String result1 = getIntent().getExtras().getString("result1");
         String result2 = getIntent().getExtras().getString("result2");
 
-        Intent intent = new Intent(this,OuvidoDireito2kActivity.class);
+        Intent intent = new Intent(this,OuvidoDireito4kActivity.class);
 
         intent.putExtra("result1", result1);
         intent.putExtra("result2", result2);

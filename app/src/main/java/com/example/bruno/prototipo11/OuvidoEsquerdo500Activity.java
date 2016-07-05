@@ -14,7 +14,7 @@ import android.widget.TextView;
 /**
  * Created by Guilherme on 20/06/16.
  */
-public class OuvidoEsquerdo500Activity extends Activity {
+public class OuvidoEsquerdo500Activity extends AppCompatActivity {
 
     Thread t;
     boolean isRunning = true;
@@ -66,7 +66,7 @@ public class OuvidoEsquerdo500Activity extends Activity {
                         sr, AudioFormat.CHANNEL_OUT_MONO,
                         AudioFormat.ENCODING_PCM_16BIT, sr,
                         AudioTrack.MODE_STREAM);
-                audioTrack.setStereoVolume(1,0);
+                audioTrack.setStereoVolume(0,1);
 
                 short samples[] = new short[sr];
                 double amp = 100;

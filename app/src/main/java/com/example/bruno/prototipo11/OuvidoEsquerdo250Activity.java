@@ -64,7 +64,7 @@ public class OuvidoEsquerdo250Activity extends AppCompatActivity {
                         sr, AudioFormat.CHANNEL_OUT_MONO,
                         AudioFormat.ENCODING_PCM_16BIT, sr,
                         AudioTrack.MODE_STREAM);
-                audioTrack.setStereoVolume(1,0);
+                audioTrack.setStereoVolume(0,1);
 
                 short samples[] = new short[sr];
                 double amp = 100;
@@ -90,7 +90,6 @@ public class OuvidoEsquerdo250Activity extends AppCompatActivity {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
 
 
                     switch (dB){

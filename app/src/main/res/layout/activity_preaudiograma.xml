@@ -7,7 +7,7 @@
         android:layout_width="289dp"
         android:layout_height="319dp"
         android:id="@+id/imageView2"
-        android:src="@drawable/audiogramabase"
+        android:src="@drawable/audiograma"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 

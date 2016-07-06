@@ -155,12 +155,12 @@ public class AudiogramaActivity extends AppCompatActivity {
         });
 
 
-        series.setTitle("Direito");
-        series2.setTitle("Esquerdo");
-        seriesp1.setTitle("Direito");
-        seriesp2.setTitle("Esquerdo");
-        graph.getLegendRenderer().setVisible(true);
-        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.BOTTOM);
+//        series.setTitle("Direito");
+//        series2.setTitle("Esquerdo");
+//        seriesp1.setTitle("Direito");
+//        seriesp2.setTitle("Esquerdo");
+//        graph.getLegendRenderer().setVisible(true);
+//        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.BOTTOM);
 
         StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
         staticLabelsFormatter.setHorizontalLabels(new String[] {" ","250", "500", "1000", "2000","4000","8000"," "});

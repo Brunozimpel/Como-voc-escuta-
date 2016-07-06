@@ -15,11 +15,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    public void gotoprecalibracao(View view){
-        Intent intent = new Intent(this, PreCalibracao.class);
-        startActivity(intent);
-    }
+//
+//    public void gotoprecalibracao(View view){
+//        Intent intent = new Intent(this, PreCalibracao.class);
+//        startActivity(intent);
+//    }
 
     public void teste(View view) {
         Intent intent = new Intent(this, PreTestActivity.class);

@@ -26,11 +26,6 @@ public class AudiogramaActivity extends AppCompatActivity {
 
     private String duzentos,quinhentos, umk, doisk, tresk, quatrok, seisk, oitok,
             duzentosEsq,quinhentosEsq, umkEsq, doiskEsq,treskEsq, quatrokEsq, seiskEsq, oitokEsq;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -90,6 +85,7 @@ public class AudiogramaActivity extends AppCompatActivity {
                 new DataPoint(10000, s),
                 new DataPoint(11000, k),
                 new DataPoint(12000, t)
+
         });
         series.setColor(Color.RED);
         series.setThickness(4);
@@ -104,6 +100,7 @@ public class AudiogramaActivity extends AppCompatActivity {
                 new DataPoint(10000, s2),
                 new DataPoint(11000,k2),
                 new DataPoint(12000, t2)
+
         });
 
 
@@ -158,10 +155,12 @@ public class AudiogramaActivity extends AppCompatActivity {
         });
 
 
-//        series.setTitle("Direito");
-//        series2.setTitle("Esquerdo");
-//        graph.getLegendRenderer().setVisible(true);
-//        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
+        series.setTitle("Direito");
+        series2.setTitle("Esquerdo");
+        seriesp1.setTitle("Direito");
+        seriesp2.setTitle("Esquerdo");
+        graph.getLegendRenderer().setVisible(true);
+        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.BOTTOM);
 
         StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
         staticLabelsFormatter.setHorizontalLabels(new String[] {" ","250", "500", "1000", "2000","4000","8000"," "});
@@ -171,7 +170,7 @@ public class AudiogramaActivity extends AppCompatActivity {
 
         GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
         gridLabel.setHorizontalAxisTitle("Frequencia [Hz]");
-        gridLabel.setVerticalAxisTitle("Intensidade [dB NA]");
+        gridLabel.setVerticalAxisTitle("Intensidade [dB]");
 
         graph.getViewport().setMinX(0);
         graph.getViewport().setMaxX(14000);

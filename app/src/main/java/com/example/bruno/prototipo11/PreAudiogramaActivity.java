@@ -2,59 +2,24 @@ package com.example.bruno.prototipo11;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
 
 /**
- * Created by bruno on 22/06/2016.
+ * Created by bruno on 06/07/2016.
  */
-public class FimEsqActivity extends AppCompatActivity {
+public class PreAudiogramaActivity extends AppCompatActivity {
 
-    TextView result250,result500,result1k,result2k,result3k,result4k,result6k,result8k;
-
-    private String  duzentosEsq, quinhentosEsq,umkEsq,doiskEsq, treskEsq, quatrokEsq, seiskEsq, oitokEsq;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fim3esq);
-
-        result250 = (TextView) findViewById(R.id.duzentosEsq);
-        result500 = (TextView) findViewById(R.id.quinhentosEsq);
-        result1k = (TextView) findViewById(R.id.umKHzEsq);
-        result2k = (TextView) findViewById(R.id.doisKHzEsq);
-        result3k = (TextView) findViewById(R.id.tresKHzEsq);
-        result4k = (TextView) findViewById(R.id.quatroKHzEsq);
-        result6k = (TextView) findViewById(R.id.seisKHzEsq);
-        result8k = (TextView) findViewById(R.id.oitoKHzEsq);
-
-
-        Intent i=this.getIntent();
-
-        duzentosEsq=i.getStringExtra("result250");
-        quinhentosEsq=i.getStringExtra("result00");
-        umkEsq=i.getStringExtra("result10");
-        doiskEsq=i.getStringExtra("result20");
-        treskEsq=i.getStringExtra("result30");
-        quatrokEsq=i.getStringExtra("result40");
-        seiskEsq=i.getStringExtra("result60");
-        oitokEsq=i.getStringExtra("result80");
-
-        result250.setText("250Hz:"+ duzentosEsq + "dB");
-        result500.setText("500Hz:"+ quinhentosEsq + "dB");
-        result1k.setText("1KHz:"+ umkEsq + "dB");
-        result2k.setText("2KHz:"+ doiskEsq + "dB");
-        result3k.setText("3KHz:"+ treskEsq + "dB");
-        result4k.setText("4KHz:"+ quatrokEsq + "dB");
-        result6k.setText("6KHz:"+ seiskEsq + "dB");
-        result8k.setText("8KHz:"+ oitokEsq + "dB");
-
-
+        setContentView(R.layout.activity_preaudiograma);
     }
 
 
-    public void preaudiograma(View view) {
+    public void audiograma(View view) {
 
         String result25 = getIntent().getExtras().getString("result25");
         String result0 = getIntent().getExtras().getString("result0");
@@ -74,7 +39,7 @@ public class FimEsqActivity extends AppCompatActivity {
         String result60 = getIntent().getExtras().getString("result60");
         String result80 = getIntent().getExtras().getString("result80");
 
-        Intent intent = new Intent(this, PreAudiogramaActivity.class);
+        Intent intent = new Intent(this, AudiogramaActivity.class);
 
         intent.putExtra("result25", result25);
         intent.putExtra("result0", result0);
@@ -97,4 +62,8 @@ public class FimEsqActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
+
+
 }

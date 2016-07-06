@@ -10,5 +10,4 @@
         android:id="@+id/graph"
         android:background="#dedada"/>
 
-
 </LinearLayout>

@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Prototipo2.1</string>
-    <string name="tittle">Audiograma para Android versao 2</string>
+    <string name="app_name">Como você escuta?</string>
+    <string name="tittle">Como você escuta?</string>
     <string name="button_1">Calibração</string>
     <string name="button_2">Iniciar Calibração</string>
     <string name="button_3">Iniciar Teste Ouvido Esquerdo</string>
@@ -9,7 +9,7 @@
     <string name="lb_iniciar">INICIAR</string>
     <string name="fim1">O seu fone não está apto à realizar o teste, tente novamente com outro fone.</string>
     <string name="fim2">Perda de audição superior ao suportado pelos nossos testes. Recomendamos realizar teste clínico.</string>
-    <string name="info">Para melhores resultados, utilize um fone de ouvido funcional e realize o teste em um  ambiente silencioso.</string>
+    <string name="info">Para melhores resultados, utilize um fone de ouvido funcional e realize o teste em um  ambiente silencioso. Esse teste não substitui uma audiometria real, em caso de suspeita de problemas auditivos, por favor, consulte um médico.</string>
     <string name="fim3">Seus resultados do ouvido direito:</string>
     <string name="fim3esq">Seus resultados do ouvido esquerdo:</string>
 

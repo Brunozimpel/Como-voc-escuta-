@@ -101,7 +101,7 @@ public class OuvidoDireito2kActivity extends AppCompatActivity{
                                     i1 += 1;
                                     j1 = 0;
                                 }else if(i1 >= 2) {
-                                    finalErro();
+                                    mandarResultado();
                                 }
                             }else {
                                 dB = 2;

@@ -8,8 +8,8 @@
     <string name="precalibracao">Aproxime o seu fone de ouvido do microfone do seu celular</string>
     <string name="lb_iniciar">INICIAR</string>
     <string name="fim1">O seu fone não está apto à realizar o teste, tente novamente com outro fone.</string>
-    <string name="fim2">Perda de audição superior ao suportado pelos nossos testes. Recomendamos realizar teste clínico.</string>
-    <string name="info">Para melhores resultados, utilize um fone de ouvido funcional e realize o teste em um  ambiente silencioso. Esse teste não substitui uma audiometria real, em caso de suspeita de problemas auditivos, por favor, consulte um médico.</string>
+    <string name="fim2">Você não ouviu uma intensidade de 80 dB, recomendamos que verifique seu fone e possivelmente realize um teste clínico.</string>
+    <string name="info">Para melhores resultados, utilize um fone de ouvido funcional, aumente seu volume e realize o teste em um  ambiente silencioso. Esse teste não substitui uma audiometria real, em caso de suspeita de problemas auditivos, por favor, consulte um médico.</string>
     <string name="fim3">Seus resultados do ouvido direito:</string>
     <string name="fim3esq">Seus resultados do ouvido esquerdo:</string>
 

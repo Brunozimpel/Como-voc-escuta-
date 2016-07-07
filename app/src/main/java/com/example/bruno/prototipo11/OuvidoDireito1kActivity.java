@@ -36,7 +36,7 @@ public class OuvidoDireito1kActivity extends AppCompatActivity {
         double num = Math.random();
         if (num < 0.2){
             time = 2000;
-        } else if (num < 0.4 && num >= 0.2){
+        }else if (num < 0.4 && num >= 0.2){
             time = 2500;
         }else if(num < 0.6 && num >= 0.4){
             time = 3000;
@@ -61,7 +61,7 @@ public class OuvidoDireito1kActivity extends AppCompatActivity {
                 // set process priority
                 setPriority(Thread.MAX_PRIORITY);
                 // create an audiotrack object
-                AudioTrack audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC,
+                AudioTrack audioTrack = new AudioTrack (AudioManager.STREAM_MUSIC,
                         sr, AudioFormat.CHANNEL_OUT_MONO,
                         AudioFormat.ENCODING_PCM_16BIT, sr,
                         AudioTrack.MODE_STREAM);
@@ -103,7 +103,7 @@ public class OuvidoDireito1kActivity extends AppCompatActivity {
                                     i1 += 1;
                                     j1 = 0;
                                 }else if(i1 >= 2) {
-                                    finalErro();
+                                    mandarResultado();
                                 }
                             }else {
                                 dB = 2;

@@ -157,8 +157,6 @@ public class AudiogramaActivity extends AppCompatActivity {
 
 //        series.setTitle("Direito");
 //        series2.setTitle("Esquerdo");
-//        seriesp1.setTitle("Direito");
-//        seriesp2.setTitle("Esquerdo");
 //        graph.getLegendRenderer().setVisible(true);
 //        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.BOTTOM);
 
